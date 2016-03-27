@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-QF-tHW">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ans" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWw-4T-BaX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ans" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWw-4T-BaX">
                                         <rect key="frame" x="156" y="126" width="329" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="329" id="d0k-Cg-GgF">
@@ -36,7 +35,7 @@
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="172" y="128" width="329" height="39"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="-16" y="-29" width="38" height="30"/>
                                             <mask key="constraints">
                                                 <exclude reference="d0k-Cg-GgF"/>
@@ -44,7 +43,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POy-WC-pVj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POy-WC-pVj">
                                         <rect key="frame" x="219" y="374" width="60" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="1CL-9m-vLN"/>
@@ -60,7 +59,7 @@
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="240" y="62" width="60" height="24"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="-16" y="-29" width="30" height="32"/>
                                             <mask key="constraints">
                                                 <exclude reference="1CL-9m-vLN"/>
@@ -68,7 +67,7 @@
                                             </mask>
                                         </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwl-hl-2EL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwl-hl-2EL">
                                         <rect key="frame" x="287" y="374" width="60" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="KFF-gW-cnm"/>
@@ -81,7 +80,7 @@
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="308" y="62" width="60" height="24"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="-16" y="-29" width="30" height="32"/>
                                             <mask key="constraints">
                                                 <exclude reference="KFF-gW-cnm"/>
@@ -89,7 +88,7 @@
                                             </mask>
                                         </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAW-sS-8MY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAW-sS-8MY">
                                         <rect key="frame" x="355" y="370" width="60" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="8C2-sm-9sV"/>
@@ -102,7 +101,7 @@
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="376" y="58" width="60" height="32"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="-16" y="-61" width="30" height="32"/>
                                             <mask key="constraints">
                                                 <exclude reference="8C2-sm-9sV"/>
@@ -110,7 +109,7 @@
                                             </mask>
                                         </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msK-SQ-PEU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msK-SQ-PEU">
                                         <rect key="frame" x="426" y="370" width="60" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Bo1-pk-fvq"/>
@@ -123,7 +122,7 @@
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="447" y="58" width="60" height="32"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="-16" y="-29" width="30" height="32"/>
                                             <mask key="constraints">
                                                 <exclude reference="Bo1-pk-fvq"/>
@@ -131,7 +130,7 @@
                                             </mask>
                                         </variation>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMD-bE-dbv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMD-bE-dbv">
                                         <rect key="frame" x="146" y="37" width="345" height="146"/>
                                         <color key="backgroundColor" red="0.44223794720767884" green="0.44223794720767884" blue="0.44223794720767884" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -148,15 +147,14 @@
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="162" y="39" width="345" height="146"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="21" y="8" width="686" height="43"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
                                                 <exclude reference="CW1-7K-Htm"/>
                                                 <exclude reference="zX9-ax-m1c"/>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NQ-J6-uPY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NQ-J6-uPY">
                                         <rect key="frame" x="151" y="372" width="60" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="AnY-BO-IGy"/>
@@ -333,8 +331,9 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="219.75" y="303.75"/>
         </scene>
