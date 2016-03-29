@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2FA531A81CA0293800662B67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531A71CA0293800662B67 /* AppDelegate.swift */; };
-		2FA531AA1CA0293800662B67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531A91CA0293800662B67 /* ViewController.swift */; };
 		2FA531AD1CA0293800662B67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA531AB1CA0293800662B67 /* Main.storyboard */; };
 		2FA531AF1CA0293800662B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA531AE1CA0293800662B67 /* Assets.xcassets */; };
 		2FA531B21CA0293800662B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA531B01CA0293800662B67 /* LaunchScreen.storyboard */; };
 		2FA531BD1CA0293800662B67 /* SuperCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531BC1CA0293800662B67 /* SuperCalcTests.swift */; };
 		2FA531C81CA0293800662B67 /* SuperCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */; };
 		F2FAB2E61CAB0614008B4D8E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */; };
+		F2FAB2EA1CAB0E05008B4D8E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */; };
+		F2FAB2EC1CAB1288008B4D8E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		2FA531A41CA0293800662B67 /* SuperCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA531A71CA0293800662B67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2FA531A91CA0293800662B67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2FA531AC1CA0293800662B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FA531AE1CA0293800662B67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FA531B11CA0293800662B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCalcUITests.swift; sourceTree = "<group>"; };
 		2FA531C91CA0293800662B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				2FA531A71CA0293800662B67 /* AppDelegate.swift */,
-				2FA531A91CA0293800662B67 /* ViewController.swift */,
 				F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */,
+				F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */,
+				F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */,
 				2FA531AB1CA0293800662B67 /* Main.storyboard */,
 				2FA531AE1CA0293800662B67 /* Assets.xcassets */,
 				2FA531B01CA0293800662B67 /* LaunchScreen.storyboard */,
@@ -260,7 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2FAB2E61CAB0614008B4D8E /* PageViewController.swift in Sources */,
-				2FA531AA1CA0293800662B67 /* ViewController.swift in Sources */,
+				F2FAB2EC1CAB1288008B4D8E /* GraphViewController.swift in Sources */,
+				F2FAB2EA1CAB0E05008B4D8E /* CalculatorViewController.swift in Sources */,
 				2FA531A81CA0293800662B67 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

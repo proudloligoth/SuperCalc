@@ -14,6 +14,14 @@ class PageViewController: UIPageViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        dataSource = self
+        if let firstViewController = orderedViewControllers.first {
+            setViewControllers([firstViewController],
+                               direction: .Forward,
+                               animated: true,
+                               completion: nil)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +29,19 @@ class PageViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private(set) lazy var orderedViewControllers: [UIViewController] = {
+        return [self.newColoredViewController("Calculator"),
+                self.newColoredViewController("Graph")]
+    }()
+    
+    private func newColoredViewController(color: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil) .
+            instantiateViewControllerWithIdentifier("\(color)ViewController")
+    }
+    
 
+   
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +51,50 @@ class PageViewController: UIPageViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
+    // MARK: UIPageViewControllerDataSource
+    
+    extension PageViewController: UIPageViewControllerDataSource {
+        
+        func pageViewController(pageViewController: UIPageViewController,
+                                viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+            guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+                return nil
+            }
+            
+            let previousIndex = viewControllerIndex - 1
+            
+            guard previousIndex >= 0 else {
+                return nil
+            }
+            
+            guard orderedViewControllers.count > previousIndex else {
+                return nil
+            }
+            
+            return orderedViewControllers[previousIndex]
+        }
+        
+        func pageViewController(pageViewController: UIPageViewController,
+                                viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+            guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+                return nil
+            }
+            
+            let nextIndex = viewControllerIndex + 1
+            let orderedViewControllersCount = orderedViewControllers.count
+            
+            guard orderedViewControllersCount != nextIndex else {
+                return nil
+            }
+            
+            guard orderedViewControllersCount > nextIndex else {
+                return nil
+            }
+            
+            return orderedViewControllers[nextIndex]
+        }
+
+    }
+

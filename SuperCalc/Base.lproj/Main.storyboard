@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainView" id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -76,7 +76,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJS-EZ-g3t">
-                                                                <rect key="frame" x="171.5" y="0.0" width="86" height="51"/>
+                                                                <rect key="frame" x="172" y="0.0" width="85" height="51"/>
                                                                 <color key="backgroundColor" red="0.70196099209999996" green="0.91741655759999996" blue="0.31520731019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
                                                                 <state key="normal" title="tan">
@@ -87,7 +87,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZx-gZ-qq0">
-                                                                <rect key="frame" x="257.5" y="0.0" width="85.5" height="51"/>
+                                                                <rect key="frame" x="257" y="0.0" width="86" height="51"/>
                                                                 <color key="backgroundColor" red="0.53111415194476019" green="0.84716541231204179" blue="0.16999698617076761" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
                                                                 <state key="normal" title="ln">
@@ -125,7 +125,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUO-bB-rFC">
-                                                                <rect key="frame" x="171.5" y="0.0" width="86" height="51"/>
+                                                                <rect key="frame" x="172" y="0.0" width="85" height="51"/>
                                                                 <color key="backgroundColor" red="0.16862745098039217" green="0.90196078431372551" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
                                                                 <state key="normal" title="e">
@@ -136,7 +136,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coO-G3-op6">
-                                                                <rect key="frame" x="257.5" y="0.0" width="85.5" height="51"/>
+                                                                <rect key="frame" x="257" y="0.0" width="86" height="51"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.84211948850220719" blue="0.56975038574806935" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
                                                                 <state key="normal" title="pi">
@@ -174,7 +174,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPm-SK-LhJ">
-                                                                <rect key="frame" x="171.5" y="0.0" width="86" height="52"/>
+                                                                <rect key="frame" x="172" y="0.0" width="85" height="52"/>
                                                                 <color key="backgroundColor" red="0.27843137254901962" green="0.92941176470588238" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
                                                                 <state key="normal" title=")">
@@ -185,7 +185,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwm-mV-oNm">
-                                                                <rect key="frame" x="257.5" y="0.0" width="85.5" height="52"/>
+                                                                <rect key="frame" x="257" y="0.0" width="86" height="52"/>
                                                                 <color key="backgroundColor" red="0.31878987725533703" green="0.84953184954996352" blue="0.86233061287342161" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
                                                                 <state key="normal" title="√">
@@ -255,7 +255,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ddh-Hu-EcH">
-                                                        <rect key="frame" x="86" y="0.0" width="85.5" height="336"/>
+                                                        <rect key="frame" x="86" y="0.0" width="86" height="336"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaD-EI-3Mc">
                                                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="84"/>
@@ -308,10 +308,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1si-ea-7hQ">
-                                                        <rect key="frame" x="171.5" y="0.0" width="86" height="336"/>
+                                                        <rect key="frame" x="172" y="0.0" width="85" height="336"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPx-nS-PIM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="84"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
                                                                 <color key="backgroundColor" red="1" green="0.49844358894730167" blue="0.058413231459357395" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="30"/>
                                                                 <state key="normal" title="9">
@@ -323,7 +323,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWb-On-8KK">
-                                                                <rect key="frame" x="0.0" y="84" width="86" height="84"/>
+                                                                <rect key="frame" x="0.0" y="84" width="85" height="84"/>
                                                                 <color key="backgroundColor" red="0.98431372549019602" green="0.28235294117647058" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="30"/>
                                                                 <state key="normal" title="6">
@@ -335,7 +335,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pt-hT-aKI">
-                                                                <rect key="frame" x="0.0" y="168" width="86" height="84"/>
+                                                                <rect key="frame" x="0.0" y="168" width="85" height="84"/>
                                                                 <color key="backgroundColor" red="1" green="0.49844358894730167" blue="0.058413231459357395" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="30"/>
                                                                 <state key="normal" title="3">
@@ -347,7 +347,7 @@
                                                                 </variation>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qks-AU-drx">
-                                                                <rect key="frame" x="0.0" y="252" width="86" height="84"/>
+                                                                <rect key="frame" x="0.0" y="252" width="85" height="84"/>
                                                                 <color key="backgroundColor" red="0.98431372549019602" green="0.28235294117647058" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="30"/>
                                                                 <state key="normal" title="=">
@@ -361,7 +361,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bho-A2-Kz4">
-                                                        <rect key="frame" x="257.5" y="0.0" width="85.5" height="336"/>
+                                                        <rect key="frame" x="257" y="0.0" width="86" height="336"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNc-fr-CEc">
                                                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="60"/>
@@ -444,6 +444,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -451,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.5" y="-521.25"/>
+            <point key="canvasLocation" x="280.5" y="196.5"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="NeX-rd-bZe">
@@ -459,25 +460,27 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="vH6-l7-P3o" customClass="PageViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAr-JR-Wh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="-555"/>
+            <point key="canvasLocation" x="522" y="-528"/>
         </scene>
-        <!--Content View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="g6W-vr-WdN">
             <objects>
-                <viewController storyboardIdentifier="ContentViewController" id="3fJ-Ed-bAq" customClass="ContentViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GraphViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3fJ-Ed-bAq" customClass="GraphViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Wd-2y-msL"/>
                         <viewControllerLayoutGuide type="bottom" id="isf-X7-I8m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ePb-16-phI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUQ-Vy-LPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="115"/>
+            <point key="canvasLocation" x="662" y="103"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
