@@ -14,6 +14,7 @@
 		2FA531B21CA0293800662B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA531B01CA0293800662B67 /* LaunchScreen.storyboard */; };
 		2FA531BD1CA0293800662B67 /* SuperCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531BC1CA0293800662B67 /* SuperCalcTests.swift */; };
 		2FA531C81CA0293800662B67 /* SuperCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */; };
+		F2FAB2E61CAB0614008B4D8E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2FA531C31CA0293800662B67 /* SuperCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCalcUITests.swift; sourceTree = "<group>"; };
 		2FA531C91CA0293800662B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				2FA531A71CA0293800662B67 /* AppDelegate.swift */,
 				2FA531A91CA0293800662B67 /* ViewController.swift */,
+				F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */,
 				2FA531AB1CA0293800662B67 /* Main.storyboard */,
 				2FA531AE1CA0293800662B67 /* Assets.xcassets */,
 				2FA531B01CA0293800662B67 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FAB2E61CAB0614008B4D8E /* PageViewController.swift in Sources */,
 				2FA531AA1CA0293800662B67 /* ViewController.swift in Sources */,
 				2FA531A81CA0293800662B67 /* AppDelegate.swift in Sources */,
 			);
@@ -486,6 +490,7 @@
 				2FA531CE1CA0293800662B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2FA531CF1CA0293800662B67 /* Build configuration list for PBXNativeTarget "SuperCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +499,7 @@
 				2FA531D11CA0293800662B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2FA531D21CA0293800662B67 /* Build configuration list for PBXNativeTarget "SuperCalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +508,7 @@
 				2FA531D41CA0293800662B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
