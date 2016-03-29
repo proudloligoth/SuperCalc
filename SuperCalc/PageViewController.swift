@@ -95,6 +95,19 @@ class PageViewController: UIPageViewController {
             
             return orderedViewControllers[nextIndex]
         }
-
+        
+        //index of pages
+     /*   func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+            return orderedViewControllers.count
+        }
+        
+        func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+            guard let firstViewController = viewControllers?.first,
+                firstViewControllerIndex = orderedViewControllers.indexOf(firstViewController) else {
+                    return 0
+            }
+            
+            return firstViewControllerIndex
+        }*/
     }
 
