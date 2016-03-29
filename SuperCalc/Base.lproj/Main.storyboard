@@ -433,7 +433,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="0.51742739237630586" blue="0.011647161118244154" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wA7-fc-nlR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ORd-A7-bCS"/>
