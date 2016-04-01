@@ -11,7 +11,8 @@ import Charts
 
 class GraphViewController: UIViewController {
 
-    @IBOutlet weak var lineChartView: LineChartView!
+    @IBOutlet weak var linechart: LineChartView!
+
 
     let months = ["Jan" , "Feb", "Mar", "Apr", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"]
     
@@ -29,10 +30,10 @@ class GraphViewController: UIViewController {
 //        // 4
 //        lineChartView.noDataText = "You need to provide data for the chart."
 //        // 5
-        setChartData(months)
+        setChartData(months,values: dollars1)
     }
     
-    func setChartData(months : [String]) {
+    func setChartData(months : [String],values: [Double]) {
         // 1 - creating an array of data entries
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         for i in 0 ..< months.count {
@@ -60,7 +61,7 @@ class GraphViewController: UIViewController {
         data.setValueTextColor(UIColor.whiteColor())
         
         //5 - finally set our data
-        lineChartView.data = data
+        linechart.data = data
     }
 
     override func didReceiveMemoryWarning() {
