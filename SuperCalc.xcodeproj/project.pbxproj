@@ -16,6 +16,8 @@
 		2FA531BD1CA0293800662B67 /* SuperCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531BC1CA0293800662B67 /* SuperCalcTests.swift */; };
 		2FA531C81CA0293800662B67 /* SuperCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */; };
 		F234103B1CAF12E10002A3DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234103A1CAF12E10002A3DC /* ViewController.swift */; };
+		F23410401CB073A70002A3DC /* SimplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234103F1CB073A70002A3DC /* SimplePageViewController.swift */; };
+		F23410421CB077B30002A3DC /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23410411CB077B30002A3DC /* SimpleViewController.swift */; };
 		F2FAB2E61CAB0614008B4D8E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */; };
 		F2FAB2EA1CAB0E05008B4D8E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */; };
 		F2FAB2EC1CAB1288008B4D8E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */; };
@@ -102,6 +104,8 @@
 		2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCalcUITests.swift; sourceTree = "<group>"; };
 		2FA531C91CA0293800662B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F234103A1CAF12E10002A3DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F234103F1CB073A70002A3DC /* SimplePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePageViewController.swift; sourceTree = "<group>"; };
+		F23410411CB077B30002A3DC /* SimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 		F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			children = (
 				2FA531A71CA0293800662B67 /* AppDelegate.swift */,
 				F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */,
+				F23410411CB077B30002A3DC /* SimpleViewController.swift */,
+				F234103F1CB073A70002A3DC /* SimplePageViewController.swift */,
 				F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */,
 				F234103A1CAF12E10002A3DC /* ViewController.swift */,
 				F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */,
@@ -372,7 +378,9 @@
 				F234103B1CAF12E10002A3DC /* ViewController.swift in Sources */,
 				F2FAB2E61CAB0614008B4D8E /* PageViewController.swift in Sources */,
 				F2FAB2EC1CAB1288008B4D8E /* GraphViewController.swift in Sources */,
+				F23410401CB073A70002A3DC /* SimplePageViewController.swift in Sources */,
 				F2FAB2EA1CAB0E05008B4D8E /* CalculatorViewController.swift in Sources */,
+				F23410421CB077B30002A3DC /* SimpleViewController.swift in Sources */,
 				2FA531A81CA0293800662B67 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

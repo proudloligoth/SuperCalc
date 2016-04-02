@@ -26,10 +26,10 @@ class ViewController: UIViewController {
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
         
-        textcal.layer.shadowColor = UIColor.blueColor().CGColor
+        textcal.layer.shadowColor = UIColor.blackColor().CGColor
         textcal.layer.shadowOpacity = 1
         textcal.layer.shadowOffset = CGSize(width: 0.0, height: 10.0)
-        textcal.layer.shadowRadius = 5
+        textcal.layer.shadowRadius = 10
 
 //        
 //        textcal.layer.shadowOpacity = 1
