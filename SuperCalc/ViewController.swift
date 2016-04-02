@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
+        
+        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
         var textcalheight = textcal.frame.size.height
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.view.frame = CGRectMake(0, textcalheight+statusBarHeight, self.view.frame.size.width, self.view.frame.size.height - textcalheight - statusBarHeight)
@@ -25,6 +26,10 @@ class ViewController: UIViewController {
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
         
+        textcal.layer.shadowColor = UIColor.blueColor().CGColor
+        textcal.layer.shadowOpacity = 1
+        textcal.layer.shadowOffset = CGSize(width: 0.0, height: 10.0)
+        textcal.layer.shadowRadius = 5
 
 //        
 //        textcal.layer.shadowOpacity = 1
