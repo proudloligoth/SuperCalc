@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
-        var textcalheight = textcal.frame.size.height
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
+        let textcalheight = textcal.frame.size.height
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.view.frame = CGRectMake(0, textcalheight+statusBarHeight, self.view.frame.size.width, self.view.frame.size.height - textcalheight - statusBarHeight)
         self.addChildViewController(self.pageViewController)
