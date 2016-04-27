@@ -506,7 +506,6 @@
         <!--View Controller-->
         <scene sceneID="2Vp-zO-7vp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xZ7-5n-mGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SciencificViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bsj-Bh-Ima" customClass="ViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bpw-8u-bwH"/>
@@ -540,6 +539,7 @@
                         <outlet property="textcal" destination="12a-It-9Pv" id="U5M-EZ-eKO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZ7-5n-mGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="658" y="-684"/>
         </scene>
@@ -581,6 +581,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Cj3-OS-Vr5" secondAttribute="trailing" id="D0a-PV-MDz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Cj3-OS-Vr5" secondAttribute="bottom" id="LAT-s3-fGk"/>
