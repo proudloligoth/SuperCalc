@@ -14,9 +14,9 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var linechart: LineChartView!
 
 
-    let months = ["Jan" , "Feb", "Mar", "Apr", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"]
+    let months:[Double] = [-1,0,1]
     
-    let dollars1 = [1453.0,2352,5431,1442,5451,6486,1173,5678,9234,1345,9411,2212]
+    let dollars1:[Double] = [-1,0,1]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class GraphViewController: UIViewController {
         setChartData(months,values: dollars1)
     }
     
-    func setChartData(months : [String],values: [Double]) {
+    func setChartData(months : [Double],values: [Double]) {
         // 1 - creating an array of data entries
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         for i in 0 ..< months.count {
@@ -41,7 +41,7 @@ class GraphViewController: UIViewController {
         }
         
         // 2 - create a data set with our array
-        let set1: LineChartDataSet = LineChartDataSet(yVals: yVals1, label: "First Set")
+        let set1: LineChartDataSet = LineChartDataSet(yVals: yVals1,label:  nil)
         set1.axisDependency = .Left // Line will correlate with left axis values
         set1.setColor(UIColor.redColor().colorWithAlphaComponent(0.5)) // our line's opacity is 50%
         //set1.setCircleColor(UIColor.redColor()) // our circle will be dark red
@@ -59,7 +59,7 @@ class GraphViewController: UIViewController {
         //4 - pass our months in for our x-axis label value along with our dataSets
         let data: LineChartData = LineChartData(xVals: months, dataSets: dataSets)
         data.setValueTextColor(UIColor.whiteColor())
-        
+//        data.ge
         //5 - finally set our data
         linechart.data = data
     }
