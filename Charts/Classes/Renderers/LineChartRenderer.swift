@@ -524,6 +524,9 @@ public class LineChartRenderer: LineRadarChartRenderer
                     pt.y = CGFloat(e.value) * phaseY
                     pt = CGPointApplyAffineTransform(pt, valueToPixelMatrix)
                     
+                    print("x = \(pt.x)")
+                    print("y = \(pt.y)")
+                    
                     if (!viewPortHandler.isInBoundsRight(pt.x))
                     {
                         break
