@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (2.0.2)
+  - FBSnapshotTestCase (2.1.1):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
+  - FBSnapshotTestCase/Core (2.1.1)
+  - FBSnapshotTestCase/SwiftSupport (2.1.1):
+    - FBSnapshotTestCase/Core
+  - SwiftCharts (0.3)
+
+DEPENDENCIES:
+  - Alamofire (= 2.0.2)
+  - FBSnapshotTestCase (from `https://github.com/facebook/ios-snapshot-test-case`)
+  - SwiftCharts (~> 0.3)
+
+EXTERNAL SOURCES:
+  FBSnapshotTestCase:
+    :git: https://github.com/facebook/ios-snapshot-test-case
+
+CHECKOUT OPTIONS:
+  FBSnapshotTestCase:
+    :commit: 5a4ee79ed96dd0d2f3766ffd22ecb04ef73c2c82
+    :git: https://github.com/facebook/ios-snapshot-test-case
+
+SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  FBSnapshotTestCase: ec0ed7378d617e4b787e6cf9899d22cb86010b94
+  SwiftCharts: c66a449d58f9c811c467f865a47b1b6136b49499
+
+PODFILE CHECKSUM: 488ae14862bb9318b8f2e96b698193716b268386
+
+COCOAPODS: 1.0.0
