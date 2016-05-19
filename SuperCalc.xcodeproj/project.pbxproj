@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F32B9791CABBABC00C50DBF /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F32B9721CABBAAA00C50DBF /* Charts.framework */; };
+		2F32B97A1CABBABC00C50DBF /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F32B9721CABBAAA00C50DBF /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2FA531A81CA0293800662B67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531A71CA0293800662B67 /* AppDelegate.swift */; };
 		2FA531AD1CA0293800662B67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA531AB1CA0293800662B67 /* Main.storyboard */; };
 		2FA531AF1CA0293800662B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA531AE1CA0293800662B67 /* Assets.xcassets */; };
 		2FA531B21CA0293800662B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA531B01CA0293800662B67 /* LaunchScreen.storyboard */; };
 		2FA531BD1CA0293800662B67 /* SuperCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531BC1CA0293800662B67 /* SuperCalcTests.swift */; };
 		2FA531C81CA0293800662B67 /* SuperCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */; };
-		2FB746641CEE616600C0C0C9 /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB746631CEE613300C0C0C9 /* SwiftCharts.framework */; };
-		2FB746651CEE616600C0C0C9 /* SwiftCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB746631CEE613300C0C0C9 /* SwiftCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5339334A1CAA9617CDAE6978 /* Pods_SuperCalcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2A72A16E2C5F328B58430D /* Pods_SuperCalcUITests.framework */; };
-		7FAE6106DF2945A3C7DBC76D /* Pods_SuperCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD8A3D2BA72C821F0CB3A3 /* Pods_SuperCalcTests.framework */; };
-		975D5891F8C8CCADD77F37BB /* Pods_SuperCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B243452522D4B89B9D4912 /* Pods_SuperCalc.framework */; };
 		F234103B1CAF12E10002A3DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234103A1CAF12E10002A3DC /* ViewController.swift */; };
 		F23410401CB073A70002A3DC /* SimplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234103F1CB073A70002A3DC /* SimplePageViewController.swift */; };
 		F23410421CB077B30002A3DC /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23410411CB077B30002A3DC /* SimpleViewController.swift */; };
@@ -55,12 +52,12 @@
 			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
 			remoteInfo = ChartsTests;
 		};
-		2F6B62821CEE62E7007D173D /* PBXContainerItemProxy */ = {
+		2F32B97B1CABBABC00C50DBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B745350147FFD7A4298BB6D4CFC16208;
-			remoteInfo = FBSnapshotTestCase;
+			containerPortal = 2F32B96A1CABBAA900C50DBF /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
 		};
 		2FA531B91CA0293800662B67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -76,51 +73,16 @@
 			remoteGlobalIDString = 2FA531A31CA0293700662B67;
 			remoteInfo = SuperCalc;
 		};
-		2FB7465C1CEE613300C0C0C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2C8951CAA37F662931D39995EAF7E2FD;
-			remoteInfo = "Pods-SuperCalc";
-		};
-		2FB7465E1CEE613300C0C0C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 481188B070F6AFA764C0C719C3D62783;
-			remoteInfo = "Pods-SuperCalcTests";
-		};
-		2FB746601CEE613300C0C0C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F4C1D46B50782D9FD4B1A3CC1A5C95A8;
-			remoteInfo = "Pods-SuperCalcUITests";
-		};
-		2FB746621CEE613300C0C0C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DF54B6FE493F0E686789416680B8EBB8;
-			remoteInfo = SwiftCharts;
-		};
-		2FB746661CEE616600C0C0C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C2ECAB174DCAE893E24722E625CB71B;
-			remoteInfo = SwiftCharts;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2FB746681CEE616600C0C0C9 /* Embed Frameworks */ = {
+		2F32B9691CABB89000C50DBF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2FB746651CEE616600C0C0C9 /* SwiftCharts.framework in Embed Frameworks */,
+				2F32B97A1CABBABC00C50DBF /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +90,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		26C69A5C718CE3A1352BDA60 /* Pods-SuperCalcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperCalcUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperCalcUITests/Pods-SuperCalcUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F32B96A1CABBAA900C50DBF /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		2FA531A41CA0293800662B67 /* SuperCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA531A71CA0293800662B67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,15 +103,6 @@
 		2FA531C31CA0293800662B67 /* SuperCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA531C71CA0293800662B67 /* SuperCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCalcUITests.swift; sourceTree = "<group>"; };
 		2FA531C91CA0293800662B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		2FC8F750B1EF37D8C0AC3854 /* Pods-SuperCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperCalc/Pods-SuperCalc.release.xcconfig"; sourceTree = "<group>"; };
-		40B7630E4A18CBF283303050 /* Pods-SuperCalcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperCalcUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperCalcUITests/Pods-SuperCalcUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4FE51FAD6DCD63D521530B56 /* Pods-SuperCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperCalc/Pods-SuperCalc.debug.xcconfig"; sourceTree = "<group>"; };
-		77B243452522D4B89B9D4912 /* Pods_SuperCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8284EB5FAC68843F20C3D66C /* Pods-SuperCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperCalcTests/Pods-SuperCalcTests.release.xcconfig"; sourceTree = "<group>"; };
-		871C7160FF457A40FE77FAED /* Pods-SuperCalcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperCalcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperCalcTests/Pods-SuperCalcTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8CFD8A3D2BA72C821F0CB3A3 /* Pods_SuperCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperCalcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2A72A16E2C5F328B58430D /* Pods_SuperCalcUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperCalcUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F234103A1CAF12E10002A3DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F234103F1CB073A70002A3DC /* SimplePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePageViewController.swift; sourceTree = "<group>"; };
 		F23410411CB077B30002A3DC /* SimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
@@ -164,8 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB746641CEE616600C0C0C9 /* SwiftCharts.framework in Frameworks */,
-				975D5891F8C8CCADD77F37BB /* Pods_SuperCalc.framework in Frameworks */,
+				2F32B9791CABBABC00C50DBF /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FAE6106DF2945A3C7DBC76D /* Pods_SuperCalcTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +131,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5339334A1CAA9617CDAE6978 /* Pods_SuperCalcUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,14 +151,11 @@
 		2FA5319B1CA0293700662B67 = {
 			isa = PBXGroup;
 			children = (
-				2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */,
 				2F32B96A1CABBAA900C50DBF /* Charts.xcodeproj */,
 				2FA531A61CA0293800662B67 /* SuperCalc */,
 				2FA531BB1CA0293800662B67 /* SuperCalcTests */,
 				2FA531C61CA0293800662B67 /* SuperCalcUITests */,
 				2FA531A51CA0293800662B67 /* Products */,
-				93BE9B5ECE4020D767F36714 /* Pods */,
-				B0FBF5DF24E0652765600C89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,41 +205,6 @@
 			path = SuperCalcUITests;
 			sourceTree = "<group>";
 		};
-		2FB746561CEE613300C0C0C9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2F6B62831CEE62E7007D173D /* FBSnapshotTestCase.framework */,
-				2FB7465D1CEE613300C0C0C9 /* Pods_SuperCalc.framework */,
-				2FB7465F1CEE613300C0C0C9 /* Pods_SuperCalcTests.framework */,
-				2FB746611CEE613300C0C0C9 /* Pods_SuperCalcUITests.framework */,
-				2FB746631CEE613300C0C0C9 /* SwiftCharts.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		93BE9B5ECE4020D767F36714 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4FE51FAD6DCD63D521530B56 /* Pods-SuperCalc.debug.xcconfig */,
-				2FC8F750B1EF37D8C0AC3854 /* Pods-SuperCalc.release.xcconfig */,
-				871C7160FF457A40FE77FAED /* Pods-SuperCalcTests.debug.xcconfig */,
-				8284EB5FAC68843F20C3D66C /* Pods-SuperCalcTests.release.xcconfig */,
-				26C69A5C718CE3A1352BDA60 /* Pods-SuperCalcUITests.debug.xcconfig */,
-				40B7630E4A18CBF283303050 /* Pods-SuperCalcUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B0FBF5DF24E0652765600C89 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				77B243452522D4B89B9D4912 /* Pods_SuperCalc.framework */,
-				8CFD8A3D2BA72C821F0CB3A3 /* Pods_SuperCalcTests.framework */,
-				EC2A72A16E2C5F328B58430D /* Pods_SuperCalcUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,18 +212,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FA531CC1CA0293800662B67 /* Build configuration list for PBXNativeTarget "SuperCalc" */;
 			buildPhases = (
-				32262572F58A98FF52ED5121 /* 📦 Check Pods Manifest.lock */,
 				2FA531A01CA0293700662B67 /* Sources */,
 				2FA531A11CA0293700662B67 /* Frameworks */,
 				2FA531A21CA0293700662B67 /* Resources */,
-				6F0FA5F074F4FD2D96D4EE75 /* 📦 Embed Pods Frameworks */,
-				62C00A237D82749F2FD1857D /* 📦 Copy Pods Resources */,
-				2FB746681CEE616600C0C0C9 /* Embed Frameworks */,
+				2F32B9691CABB89000C50DBF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2FB746671CEE616600C0C0C9 /* PBXTargetDependency */,
+				2F32B97C1CABBABC00C50DBF /* PBXTargetDependency */,
 			);
 			name = SuperCalc;
 			productName = SuperCalc;
@@ -323,12 +231,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FA531CF1CA0293800662B67 /* Build configuration list for PBXNativeTarget "SuperCalcTests" */;
 			buildPhases = (
-				BA7B1D6009FED4837D601AE2 /* 📦 Check Pods Manifest.lock */,
 				2FA531B41CA0293800662B67 /* Sources */,
 				2FA531B51CA0293800662B67 /* Frameworks */,
 				2FA531B61CA0293800662B67 /* Resources */,
-				3BC1ECFDCF62263E3C7EF7AD /* 📦 Embed Pods Frameworks */,
-				30A200C9682D1273EAFFEA66 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,11 +249,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FA531D21CA0293800662B67 /* Build configuration list for PBXNativeTarget "SuperCalcUITests" */;
 			buildPhases = (
-				6AE7ECBB546B02DB1FA12CE9 /* 📦 Check Pods Manifest.lock */,
 				2FA531BF1CA0293800662B67 /* Sources */,
 				2FA531C01CA0293800662B67 /* Frameworks */,
 				2FA531C11CA0293800662B67 /* Resources */,
-				A5561B7B71FDEC13DD0EF910 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,10 +302,6 @@
 					ProductGroup = 2F32B96B1CABBAA900C50DBF /* Products */;
 					ProjectRef = 2F32B96A1CABBAA900C50DBF /* Charts.xcodeproj */;
 				},
-				{
-					ProductGroup = 2FB746561CEE613300C0C0C9 /* Products */;
-					ProjectRef = 2FB746551CEE613300C0C0C9 /* Pods.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -442,41 +341,6 @@
 			remoteRef = 2F32B9771CABBAAA00C50DBF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2F6B62831CEE62E7007D173D /* FBSnapshotTestCase.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FBSnapshotTestCase.framework;
-			remoteRef = 2F6B62821CEE62E7007D173D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2FB7465D1CEE613300C0C0C9 /* Pods_SuperCalc.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_SuperCalc.framework;
-			remoteRef = 2FB7465C1CEE613300C0C0C9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2FB7465F1CEE613300C0C0C9 /* Pods_SuperCalcTests.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_SuperCalcTests.framework;
-			remoteRef = 2FB7465E1CEE613300C0C0C9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2FB746611CEE613300C0C0C9 /* Pods_SuperCalcUITests.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_SuperCalcUITests.framework;
-			remoteRef = 2FB746601CEE613300C0C0C9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2FB746631CEE613300C0C0C9 /* SwiftCharts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftCharts.framework;
-			remoteRef = 2FB746621CEE613300C0C0C9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -505,129 +369,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		30A200C9682D1273EAFFEA66 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperCalcTests/Pods-SuperCalcTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		32262572F58A98FF52ED5121 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3BC1ECFDCF62263E3C7EF7AD /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperCalcTests/Pods-SuperCalcTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62C00A237D82749F2FD1857D /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperCalc/Pods-SuperCalc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6AE7ECBB546B02DB1FA12CE9 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6F0FA5F074F4FD2D96D4EE75 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperCalc/Pods-SuperCalc-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5561B7B71FDEC13DD0EF910 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperCalcUITests/Pods-SuperCalcUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA7B1D6009FED4837D601AE2 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2FA531A01CA0293700662B67 /* Sources */ = {
@@ -663,6 +404,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2F32B97C1CABBABC00C50DBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = 2F32B97B1CABBABC00C50DBF /* PBXContainerItemProxy */;
+		};
 		2FA531BA1CA0293800662B67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2FA531A31CA0293700662B67 /* SuperCalc */;
@@ -672,11 +418,6 @@
 			isa = PBXTargetDependency;
 			target = 2FA531A31CA0293700662B67 /* SuperCalc */;
 			targetProxy = 2FA531C41CA0293800662B67 /* PBXContainerItemProxy */;
-		};
-		2FB746671CEE616600C0C0C9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftCharts;
-			targetProxy = 2FB746661CEE616600C0C0C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -785,7 +526,6 @@
 		};
 		2FA531CD1CA0293800662B67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FE51FAD6DCD63D521530B56 /* Pods-SuperCalc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -799,7 +539,6 @@
 		};
 		2FA531CE1CA0293800662B67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FC8F750B1EF37D8C0AC3854 /* Pods-SuperCalc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -813,7 +552,6 @@
 		};
 		2FA531D01CA0293800662B67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 871C7160FF457A40FE77FAED /* Pods-SuperCalcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SuperCalcTests/Info.plist;
@@ -826,7 +564,6 @@
 		};
 		2FA531D11CA0293800662B67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8284EB5FAC68843F20C3D66C /* Pods-SuperCalcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SuperCalcTests/Info.plist;
@@ -839,7 +576,6 @@
 		};
 		2FA531D31CA0293800662B67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26C69A5C718CE3A1352BDA60 /* Pods-SuperCalcUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SuperCalcUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -852,7 +588,6 @@
 		};
 		2FA531D41CA0293800662B67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B7630E4A18CBF283303050 /* Pods-SuperCalcUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SuperCalcUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
