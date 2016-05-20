@@ -635,7 +635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ7-5n-mGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626" y="-682"/>
+            <point key="canvasLocation" x="678" y="-684"/>
         </scene>
         <!--Simple Page View Controller-->
         <scene sceneID="osC-h9-e2I">
@@ -695,10 +695,10 @@
             </objects>
             <point key="canvasLocation" x="865.5" y="134.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Simple Cal View Controller-->
         <scene sceneID="1Ii-6y-Trj">
             <objects>
-                <viewController storyboardIdentifier="SimpleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dbk-XQ-IsX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SimpleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dbk-XQ-IsX" customClass="SimpleCalViewController" customModule="SuperCalc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WGt-RV-05R"/>
                         <viewControllerLayoutGuide type="bottom" id="JLR-XO-TDl"/>
@@ -767,6 +767,9 @@
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btn_dev:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="dEg-Qf-sfx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-LA-ucO">
                                                         <rect key="frame" x="83" y="0.0" width="83" height="83"/>
@@ -776,6 +779,9 @@
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btn_mul:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="vBE-J1-VSf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBW-xV-hrB">
                                                         <rect key="frame" x="166" y="0.0" width="82" height="83"/>
@@ -785,6 +791,9 @@
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btn_minus:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="RwF-0N-bMy"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-Gk-d89">
                                                         <rect key="frame" x="248" y="0.0" width="83" height="83"/>
@@ -794,8 +803,11 @@
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btn_plus:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="jaB-w8-ntc"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-bF-7RF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-bF-7RF" userLabel="C">
                                                         <rect key="frame" x="331" y="0.0" width="83" height="83"/>
                                                         <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="25"/>
@@ -803,6 +815,9 @@
                                                             <color key="titleColor" red="1" green="0.51742739240000002" blue="0.011647161119999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btn_del:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="A7e-Od-frw"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <variation key="heightClass=compact" axis="vertical"/>
@@ -830,6 +845,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_4:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="TCU-Gq-QrJ"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umW-A9-yv4">
                                                                 <rect key="frame" x="0.0" y="214" width="138" height="107"/>
@@ -839,6 +857,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_1:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="Gb7-ZE-8nV"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2J-MS-dI3">
                                                                 <rect key="frame" x="0.0" y="321" width="138" height="107"/>
@@ -862,6 +883,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_8:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="Jlf-cy-pWB"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41r-xA-oOQ">
                                                                 <rect key="frame" x="0.0" y="107" width="138" height="107"/>
@@ -871,6 +895,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_5:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="jvR-D0-wi8"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yl-j6-nTB">
                                                                 <rect key="frame" x="0.0" y="214" width="138" height="107"/>
@@ -880,6 +907,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_2:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="fY7-x4-DSb"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3B-yW-f5F">
                                                                 <rect key="frame" x="0.0" y="321" width="138" height="107"/>
@@ -889,6 +919,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_dot:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="pFs-gv-crR"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -903,6 +936,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_9:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="3WQ-OA-amt"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU1-v4-4Bo">
                                                                 <rect key="frame" x="0.0" y="107" width="138" height="107"/>
@@ -912,6 +948,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_6:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="bob-OI-JZs"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcS-Kg-LVy">
                                                                 <rect key="frame" x="0.0" y="214" width="138" height="107"/>
@@ -921,6 +960,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_3:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="3xE-jV-4wA"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lo0-XG-E8H">
                                                                 <rect key="frame" x="0.0" y="321" width="138" height="107"/>
@@ -930,6 +972,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_equal:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="Ia7-9V-dip"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -951,6 +996,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="btn_5" destination="41r-xA-oOQ" id="F7j-Y4-YaS"/>
+                        <outlet property="btn_7" destination="snz-Ga-TRD" id="AIN-ya-AJK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h02-fZ-7bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
