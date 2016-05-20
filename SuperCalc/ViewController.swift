@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textcal.text = toPass
+        //textcal.text = toPass
         
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
         let textcalheight = textcal.frame.size.height

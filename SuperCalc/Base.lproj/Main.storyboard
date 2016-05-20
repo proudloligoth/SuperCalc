@@ -333,7 +333,6 @@
                                                                 </variation>
                                                                 <connections>
                                                                     <action selector="btn_0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntp-S7-Evf"/>
-                                                                    <segue destination="bsj-Bh-Ima" kind="show" id="hfE-Iy-SH1"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -588,7 +587,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="label" destination="pWV-Kz-bvv" id="bNu-jt-ARU"/>
-                        <outlet property="sss" destination="S5F-El-cLM" id="FIy-Xh-yBl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -629,8 +627,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="caltex" destination="12a-It-9Pv" id="ODw-1f-t99"/>
-                        <outlet property="textcal" destination="12a-It-9Pv" id="U5M-EZ-eKO"/>
+                        <outlet property="textcal" destination="12a-It-9Pv" id="0JJ-kO-egm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ7-5n-mGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
