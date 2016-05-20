@@ -16,19 +16,29 @@ class GraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let chartPointsData:[(Double,Double)] = [(-2, -2), (-1.1, -100.1), (4.5, 4),(4.3,9), (7, 1), (8, 100), (12, 3)]
-        drawgraph((-2,12), yAxisnum: (-20,20), chartPointsData: chartPointsData)
+        drawgraph((-10,10), yAxisnum: (-10,10), chartPointsData: chartPointsData)
         
         
     }
+    
+    private func generateXY()->[(Double,Double)]{
+        var out:[(Double,Double)] = []
+        for var x:Double = -5;x<=5;x+=0.01{
+            let y = 10*sin(x)
+            out.append((x,y))
+        }
+        return out
+    }
+    
     
     private func drawgraph(xAxisnum: (Double,Double),yAxisnum: (Double,Double),chartPointsData: [(Double,Double)]){
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
         let chartPoints = chartPointsData.map{ChartPoint(x: ChartAxisValueDouble($0	.0, labelSettings: labelSettings), y: ChartAxisValueDouble($0.1))}
         
-        let xValues = ChartAxisValuesGenerator.generateXAxisValuesWithChartPoints(chartPoints, minSegmentCount: -20, maxSegmentCount:xAxisnum.1, multiple: ceil(xAxisnum.1/10), axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: false)
+        let xValues = ChartAxisValuesGenerator.generateXAxisValuesWithChartPoints(chartPoints, minSegmentCount: -20, maxSegmentCount:xAxisnum.1, multiple: ceil(xAxisnum.1/10), axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: true)
         
-        let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints, minSegmentCount: yAxisnum.0+1, maxSegmentCount: yAxisnum.1+10, multiple: ceil(yAxisnum.1/20), axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: true)
+        let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints, minSegmentCount: yAxisnum.0-10, maxSegmentCount: yAxisnum.1+10, multiple: ceil(yAxisnum.1/15), axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: true)
         
         let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "x", settings: labelSettings))
         let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "y", settings: labelSettings.defaultVertical()))
