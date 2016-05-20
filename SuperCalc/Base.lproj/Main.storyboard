@@ -836,6 +836,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_7:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="0YB-o6-etZ"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezg-gn-ZZX">
                                                                 <rect key="frame" x="0.0" y="107" width="138" height="107"/>
@@ -869,6 +872,9 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btn_0:" destination="Dbk-XQ-IsX" eventType="touchUpInside" id="PU1-rm-tgl"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -996,10 +1002,6 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="btn_5" destination="41r-xA-oOQ" id="F7j-Y4-YaS"/>
-                        <outlet property="btn_7" destination="snz-Ga-TRD" id="AIN-ya-AJK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h02-fZ-7bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
