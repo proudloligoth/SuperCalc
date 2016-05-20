@@ -33,6 +33,7 @@ class SimpleCalViewController: UIViewController {
     
     var accumulator: Double = 0.0 // Store the calculated value here
     var userInput = "" // User-entered digits
+    var lastOp = ""
     
     var numStack: [Double] = [] // Number stack
     var opStack: [String] = [] // Operator stack
@@ -48,61 +49,55 @@ class SimpleCalViewController: UIViewController {
     }
     
     func handleInput(str: String) {
-        if str == "-" {
-            if userInput.hasPrefix(str) {
-                // Strip off the first character (a dash)
-                userInput = userInput.substringFromIndex(userInput.startIndex.successor())
-            } else {
-                userInput = str + userInput
-            }
-        } else {
-            userInput += str
+        print("new input \(userInput)")
+        if(str == "+" || str == "-" || str == "*" || str == "/") {
+            lastOp = str
         }
-        accumulator = Double((userInput as NSString).doubleValue)
-        updateDisplay()
-    }
-    
-    func updateDisplay() {
-        // If the value is an integer, don't show a decimal point
-        let iAcc = Int(accumulator)
-        if accumulator - Double(iAcc) == 0 {
-            label.text = "\(iAcc)"
-        } else {
-            label.text = "\(accumulator)"
-        }
-    }
-    
-    func doMath(newOp: String) {
-        if userInput != "" && !numStack.isEmpty {
-            let stackOp = opStack.last
-            if !((stackOp == "+" || stackOp == "-") && (newOp == "*" || newOp == "/")) {
-                let oper = ops[opStack.removeLast()]
-                accumulator = oper!(numStack.removeLast(), accumulator)
-                doEquals()
-            }
-        }
-        opStack.append(newOp)
-        numStack.append(accumulator)
-        userInput = ""
-        updateDisplay()
-    }
-    
-    func doEquals() {
-        if userInput == "" {
-            return
-        }
-        if !numStack.isEmpty {
-            let oper = ops[opStack.removeLast()]
-            accumulator = oper!(numStack.removeLast(), accumulator)
-            if !opStack.isEmpty {
-                doEquals()
-            }
-        }
-        updateDisplay()
-        userInput = ""
+//        if str == "-" {
+//            if userInput.hasPrefix(str) {
+//                // Strip off the first character (a dash)
+//                userInput = userInput.substringFromIndex(userInput.startIndex.successor())
+//            } else {
+//                userInput = str + userInput
+//            }
+//        } else {
+//            userInput += str
+//        }
+        userInput += str
+        textlabel.text = userInput
     }
 
     
+    func displayAnswer() {
+        // If the value is an integer, don't show a decimal point
+        print(userInput)
+        if userInput[userInput.endIndex.predecessor()] == lastOp[lastOp.endIndex.predecessor()] {
+            userInput = String(userInput.characters.dropLast())
+        }
+        let exp: NSExpression = NSExpression(format: userInput)
+        var result: Double = exp.expressionValueWithObject(nil, context: nil) as! Double
+        print(result)
+        var iAcc = Int(result)
+        if result - Double(iAcc) == 0 {
+            resultlabel.text = String(iAcc)
+        } else {
+            resultlabel.text = "\(result)"
+        }
+        result = 0
+        iAcc = 0
+    }
+    
+    func doEquals() {
+        print("ans of \(userInput)")
+        if userInput == "" {
+            return
+        }
+        displayAnswer()
+    }
+
+    
+    @IBOutlet weak var textlabel: UITextView!
+    @IBOutlet weak var resultlabel: UILabel!
     @IBOutlet weak var label: UILabel!
     
     @IBAction func btn_0(sender: AnyObject) {
@@ -136,7 +131,9 @@ class SimpleCalViewController: UIViewController {
          handleInput("9")
     }
     @IBAction func btn_dot(sender: AnyObject) {
-        if hasIndex(stringToSearch: userInput, characterToFind: ".") == false {
+        var allNum = userInput.componentsSeparatedByString(lastOp)
+        let latestNum = allNum[allNum.count-1]
+        if hasIndex(stringToSearch: latestNum, characterToFind: ".") == false {
             handleInput(".")
         }
     }
@@ -144,23 +141,22 @@ class SimpleCalViewController: UIViewController {
          doEquals()
     }
     @IBAction func btn_dev(sender: AnyObject) {
-        doMath("/")
+        handleInput("/")
     }
     @IBAction func btn_mul(sender: AnyObject) {
-        doMath("*")
+        handleInput("*")
     }
     @IBAction func btn_minus(sender: AnyObject) {
-        doMath("-")
+        handleInput("-")
     }
     @IBAction func btn_plus(sender: AnyObject) {
-        doMath("+")
+        handleInput("+")
     }
     @IBAction func btn_del(sender: AnyObject) {
         userInput = ""
-        accumulator = 0
-        updateDisplay()
-        numStack.removeAll()
-        opStack.removeAll()
+        textlabel.text = ""
+        resultlabel.text = ""
+        print("reset ans \(resultlabel.text)")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
