@@ -9,7 +9,7 @@
         <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CalculatorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="SuperCalc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -71,6 +71,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_sine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vMh-Gy-Oa9"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rs-Ug-kZ9">
                                                                 <rect key="frame" x="104" y="0.0" width="103" height="79"/>
@@ -83,6 +86,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="165" width="60" height="166"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_cos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfj-fa-y1V"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJS-EZ-g3t">
                                                                 <rect key="frame" x="207" y="0.0" width="104" height="79"/>
@@ -96,6 +102,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="331" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_tan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hzh-Vi-FRf"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZx-gZ-qq0">
                                                                 <rect key="frame" x="311" y="0.0" width="103" height="79"/>
@@ -108,6 +117,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="496" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_ln:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnj-YN-6js"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <variation key="heightClass=compact" axis="vertical" misplaced="YES">
@@ -128,6 +140,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_log:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSL-6W-LUh"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTG-hk-w8s">
                                                                 <rect key="frame" x="104" y="0.0" width="103" height="79"/>
@@ -140,6 +155,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="165" width="60" height="166"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_x:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNz-gW-XTY"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUO-bB-rFC">
                                                                 <rect key="frame" x="207" y="0.0" width="104" height="79"/>
@@ -152,6 +170,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="331" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_e:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6E-CD-bFW"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coO-G3-op6">
                                                                 <rect key="frame" x="311" y="0.0" width="103" height="79"/>
@@ -164,6 +185,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="496" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_pi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7w-dK-hnW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <variation key="heightClass=compact" axis="vertical" misplaced="YES">
@@ -184,6 +208,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_square:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCz-tV-DfT"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFB-kR-FQg">
                                                                 <rect key="frame" x="104" y="0.0" width="103" height="79"/>
@@ -196,6 +223,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="165" width="60" height="166"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_openparen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBp-aM-U5V"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPm-SK-LhJ">
                                                                 <rect key="frame" x="207" y="0.0" width="104" height="79"/>
@@ -208,6 +238,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="331" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_closeparen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGh-dm-JFl"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwm-mV-oNm">
                                                                 <rect key="frame" x="311" y="0.0" width="103" height="79"/>
@@ -220,6 +253,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="496" width="60" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_root:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJ6-vW-sMz"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <variation key="heightClass=compact" axis="vertical" misplaced="YES">
@@ -250,6 +286,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="58" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1w7-ek-ccR"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-fP-i7J">
                                                                 <rect key="frame" x="0.0" y="106" width="104" height="106"/>
@@ -262,6 +301,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="165" width="58" height="166"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8FZ-q3-v6j"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avd-GU-AZr">
                                                                 <rect key="frame" x="0.0" y="212" width="104" height="106"/>
@@ -274,6 +316,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="331" width="58" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABV-jR-klq"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-bV-j7D">
                                                                 <rect key="frame" x="0.0" y="318" width="104" height="106"/>
@@ -286,6 +331,10 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="496" width="58" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntp-S7-Evf"/>
+                                                                    <segue destination="bsj-Bh-Ima" kind="show" id="hfE-Iy-SH1"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <variation key="heightClass=compact" misplaced="YES">
@@ -306,6 +355,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="59" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3e2-J1-D1F"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-MQ-RsT">
                                                                 <rect key="frame" x="0.0" y="106" width="103" height="106"/>
@@ -318,6 +370,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="165" width="59" height="166"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="knN-uY-Jct"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-9X-d0m">
                                                                 <rect key="frame" x="0.0" y="212" width="103" height="106"/>
@@ -330,6 +385,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="331" width="59" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOy-Rj-3H3"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-1L-LeV">
                                                                 <rect key="frame" x="0.0" y="318" width="103" height="106"/>
@@ -342,6 +400,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="496" width="59" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_dot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vui-gc-hft"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <variation key="heightClass=compact" misplaced="YES">
@@ -362,6 +423,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="58" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R43-fo-6Lk"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWb-On-8KK">
                                                                 <rect key="frame" x="0.0" y="106" width="104" height="106"/>
@@ -374,6 +438,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="165" width="58" height="166"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lhB-F7-3MH"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pt-hT-aKI">
                                                                 <rect key="frame" x="0.0" y="212" width="104" height="106"/>
@@ -386,6 +453,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="331" width="58" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcP-PU-NjV"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qks-AU-drx">
                                                                 <rect key="frame" x="0.0" y="318" width="104" height="106"/>
@@ -398,6 +468,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="496" width="58" height="165"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_equal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USp-wI-nHY"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <variation key="heightClass=compact" misplaced="YES">
@@ -417,6 +490,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="59" height="132"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_del:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZ8-Db-d4h"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5F-El-cLM">
                                                                 <rect key="frame" x="0.0" y="84" width="103" height="85"/>
@@ -429,6 +505,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="132" width="59" height="132"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_div:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XH9-Ev-Rwn"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkC-BI-mbd">
                                                                 <rect key="frame" x="0.0" y="169" width="103" height="85"/>
@@ -441,6 +520,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="264" width="59" height="133"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_mul:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fka-jx-Ku0"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKR-fn-7qY">
                                                                 <rect key="frame" x="0.0" y="254" width="103" height="85"/>
@@ -453,6 +535,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="397" width="59" height="132"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihE-c6-VcA"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT8-oc-quR">
                                                                 <rect key="frame" x="0.0" y="339" width="103" height="85"/>
@@ -465,6 +550,9 @@
                                                                 <variation key="heightClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="529" width="59" height="132"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="btn_plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRj-VM-sDF"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <variation key="heightClass=compact" misplaced="YES">
@@ -498,10 +586,14 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="label" destination="pWV-Kz-bvv" id="bNu-jt-ARU"/>
+                        <outlet property="sss" destination="S5F-El-cLM" id="FIy-Xh-yBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="175"/>
+            <point key="canvasLocation" x="315" y="217"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Vp-zO-7vp">
@@ -528,6 +620,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="segueTest"/>
                         <constraints>
                             <constraint firstItem="12a-It-9Pv" firstAttribute="top" secondItem="bpw-8u-bwH" secondAttribute="bottom" id="bKJ-2I-hgR"/>
                             <constraint firstAttribute="trailing" secondItem="12a-It-9Pv" secondAttribute="trailing" id="uHh-Qo-gZt"/>
@@ -536,12 +629,13 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="caltex" destination="12a-It-9Pv" id="ODw-1f-t99"/>
                         <outlet property="textcal" destination="12a-It-9Pv" id="U5M-EZ-eKO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ7-5n-mGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="-684"/>
+            <point key="canvasLocation" x="626" y="-682"/>
         </scene>
         <!--Simple Page View Controller-->
         <scene sceneID="osC-h9-e2I">

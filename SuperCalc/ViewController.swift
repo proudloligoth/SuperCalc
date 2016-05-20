@@ -14,9 +14,11 @@ class ViewController: UIViewController {
         
     @IBOutlet weak var textcal: UITextView!
     
+    internal var toPass:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        textcal.text = toPass
         
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
         let textcalheight = textcal.frame.size.height
@@ -46,6 +48,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "segueTest") {
+            var svc = segue.destinationViewController as! ViewController;
+            
+            svc.toPass = textcal.text
+            
+        }
+    }
 
     /*
     // MARK: - Navigation
