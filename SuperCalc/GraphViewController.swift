@@ -24,7 +24,7 @@ class GraphViewController: UIViewController {
     private func generateXY()->[(Double,Double)]{
         var out:[(Double,Double)] = []
         for var x:Double = -5;x<=5;x+=0.01{
-            let y = 10*sin(x)
+            let y = sin(x)
             out.append((x,y))
         }
         return out
