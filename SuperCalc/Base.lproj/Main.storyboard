@@ -562,7 +562,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAr-JR-Wh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721.5" y="-602.5"/>
+            <point key="canvasLocation" x="780.5" y="-718.5"/>
         </scene>
         <!--Graph View Controller-->
         <scene sceneID="g6W-vr-WdN">
@@ -577,19 +577,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-OS-Vr5" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="23" width="343" height="644"/>
+                                <rect key="frame" x="0.0" y="20" width="379" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cj3-OS-Vr5" secondAttribute="trailing" id="D0a-PV-MDz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cj3-OS-Vr5" secondAttribute="trailing" constant="-20" id="D0a-PV-MDz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Cj3-OS-Vr5" secondAttribute="bottom" id="LAT-s3-fGk"/>
-                            <constraint firstItem="Cj3-OS-Vr5" firstAttribute="top" secondItem="1Wd-2y-msL" secondAttribute="bottom" constant="3" id="dNV-bD-qhq"/>
-                            <constraint firstItem="Cj3-OS-Vr5" firstAttribute="leading" secondItem="ePb-16-phI" secondAttribute="leadingMargin" id="ero-Mb-cW9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cj3-OS-Vr5" secondAttribute="trailing" id="fV1-fq-dCy"/>
+                            <constraint firstItem="Cj3-OS-Vr5" firstAttribute="top" secondItem="1Wd-2y-msL" secondAttribute="bottom" id="TN5-ZJ-HLM"/>
+                            <constraint firstItem="Cj3-OS-Vr5" firstAttribute="leading" secondItem="ePb-16-phI" secondAttribute="leading" id="boJ-4n-0xW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cj3-OS-Vr5" secondAttribute="trailing" constant="-20" id="fV1-fq-dCy"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Cj3-OS-Vr5" secondAttribute="bottom" id="iqq-Nj-oFo"/>
-                            <constraint firstItem="Cj3-OS-Vr5" firstAttribute="leading" secondItem="ePb-16-phI" secondAttribute="leadingMargin" id="l0T-0P-QjA"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -853,7 +852,6 @@
                         <constraints>
                             <constraint firstItem="JLR-XO-TDl" firstAttribute="top" secondItem="QA0-NC-tnH" secondAttribute="bottom" id="B4h-ax-gIZ"/>
                             <constraint firstAttribute="trailing" secondItem="QA0-NC-tnH" secondAttribute="trailing" id="FuO-LR-ZUz"/>
-                            <constraint firstItem="QA0-NC-tnH" firstAttribute="top" secondItem="13I-I6-dVw" secondAttribute="topMargin" id="aeq-NZ-60n"/>
                             <constraint firstItem="QA0-NC-tnH" firstAttribute="leading" secondItem="13I-I6-dVw" secondAttribute="leading" id="qk6-ju-6Qm"/>
                             <constraint firstItem="QA0-NC-tnH" firstAttribute="top" secondItem="13I-I6-dVw" secondAttribute="top" constant="20" id="zFb-fC-omY"/>
                         </constraints>
