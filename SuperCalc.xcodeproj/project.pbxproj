@@ -76,6 +76,20 @@
 			remoteGlobalIDString = 2FA531A31CA0293700662B67;
 			remoteInfo = SuperCalc;
 		};
+		2FB746B11CEF400300C0C0C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06405DA61B8AA74700A689FF;
+			remoteInfo = SwiftCharts;
+		};
+		2FB746B31CEF400300C0C0C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06342AC11B8AAD7F001C9F5D;
+			remoteInfo = Examples;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -217,6 +231,15 @@
 			path = SuperCalcUITests;
 			sourceTree = "<group>";
 		};
+		2FB746AA1CEF400300C0C0C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FB746B21CEF400300C0C0C9 /* SwiftCharts.framework */,
+				2FB746B41CEF400300C0C0C9 /* Examples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +337,10 @@
 					ProductGroup = 2F32B96B1CABBAA900C50DBF /* Products */;
 					ProjectRef = 2F32B96A1CABBAA900C50DBF /* Charts.xcodeproj */;
 				},
+				{
+					ProductGroup = 2FB746AA1CEF400300C0C0C9 /* Products */;
+					ProjectRef = F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -351,6 +378,20 @@
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
 			remoteRef = 2F32B9771CABBAAA00C50DBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2FB746B21CEF400300C0C0C9 /* SwiftCharts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftCharts.framework;
+			remoteRef = 2FB746B11CEF400300C0C0C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2FB746B41CEF400300C0C0C9 /* Examples.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Examples.app;
+			remoteRef = 2FB746B31CEF400300C0C0C9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
