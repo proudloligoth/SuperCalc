@@ -106,6 +106,7 @@
 		F234103A1CAF12E10002A3DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F234103F1CB073A70002A3DC /* SimplePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePageViewController.swift; sourceTree = "<group>"; };
 		F23410411CB077B30002A3DC /* SimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCharts.xcodeproj; path = "SwiftCharts-0.3/SwiftCharts.xcodeproj"; sourceTree = "<group>"; };
 		F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		2FA5319B1CA0293700662B67 = {
 			isa = PBXGroup;
 			children = (
+				F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */,
 				2F32B96A1CABBAA900C50DBF /* Charts.xcodeproj */,
 				2FA531A61CA0293800662B67 /* SuperCalc */,
 				2FA531BB1CA0293800662B67 /* SuperCalcTests */,
