@@ -13,6 +13,13 @@ class PageViewController: UIPageViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for recognizer in self.gestureRecognizers {
+            if recognizer is UITapGestureRecognizer {
+                recognizer.enabled = false
+            }
+        }
+        
 
         // Do any additional setup after loading the view.
         dataSource = self

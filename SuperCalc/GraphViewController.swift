@@ -7,77 +7,59 @@
 //
 
 import UIKit
-// import Charts
+import Charts
+import SwiftCharts
 
 class GraphViewController: UIViewController {
 
-//    @IBOutlet weak var linechart: LineChartView!
-//
-//
-//  let months:[Double] = [-1,0,1]
-//    let dollarLabels:[String] = ["Os","Mew","Proud"]
-//    let dollars1:[Double] = [-100,0,100]
+    @IBOutlet weak var linechart: LineChartView!
+
+    private var chart: Chart? // arc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        // 1
-//        lineChartView.delegate = self
-//        // 2
-//        lineChartView.descriptionText = "Tap node for details"
-//        // 3
-//        lineChartView.descriptionTextColor = UIColor.whiteColor()
-//        lineChartView.gridBackgroundColor = UIColor.darkGrayColor()
-//        // 4
-//        lineChartView.noDataText = "You need to provide data for the chart."
-//        // 5
-//        setChartData(months,values: dollars1)
+    
+        
+        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
+        
+        let chartPoints = [(-2, -2), (-1, -1), (4, 4), (7, 1), (8, 11), (12, 3)].map{ChartPoint(x: ChartAxisValueDouble($0	.0, labelSettings: labelSettings), y: ChartAxisValueDouble($0.1))}
+        
+        let xValues = chartPoints.map{$0.x}
+        
+        let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints, minSegmentCount: 10, maxSegmentCount: 20, multiple: 2, axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: false)
+        
+        let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "x", settings: labelSettings))
+        let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "y", settings: labelSettings.defaultVertical()))
+        
+        let chartFrame = ExamplesDefaults.chartFrame(self.view.bounds)
+        
+        let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: ExamplesDefaults.chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
+        let (xAxis, yAxis, innerFrame) = (coordsSpace.xAxis, coordsSpace.yAxis, coordsSpace.chartInnerFrame)
+        
+        let lineModel = ChartLineModel(chartPoints: chartPoints, lineColor: UIColor.redColor(), animDuration: 1, animDelay: 0)
+        let chartPointsLineLayer = ChartPointsLineLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, lineModels: [lineModel])
+        
+        
+        let trackerLayerSettings = ChartPointsLineTrackerLayerSettings(thumbSize: Env.iPad ? 30 : 20, thumbCornerRadius: Env.iPad ? 16 : 10, thumbBorderWidth: Env.iPad ? 4 : 2, infoViewFont: ExamplesDefaults.fontWithSize(Env.iPad ? 26 : 16), infoViewSize: CGSizeMake(Env.iPad ? 400 : 160, Env.iPad ? 70 : 40), infoViewCornerRadius: Env.iPad ? 30 : 15)
+        let chartPointsTrackerLayer = ChartPointsLineTrackerLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, chartPoints: chartPoints, lineColor: UIColor.blackColor(), animDuration: 1, animDelay: 2, settings: trackerLayerSettings)
+        
+        let settings = ChartGuideLinesDottedLayerSettings(linesColor: UIColor.blackColor(), linesWidth: ExamplesDefaults.guidelinesWidth)
+        let guidelinesLayer = ChartGuideLinesDottedLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, settings: settings)
+        
+        let chart = Chart(
+            frame: chartFrame,
+            layers: [
+                xAxis,
+                yAxis,
+                guidelinesLayer,
+                chartPointsLineLayer,
+                chartPointsTrackerLayer
+            ]
+        )
+        
+        self.view.addSubview(chart.view)
+        self.chart = chart
     }
     
-//    func setChartData(months : [Double],values: [Double]) {
-//        // 1 - creating an array of data entries
-//        var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
-//        for i in 0 ..< months.count {
-//            yVals1.append(ChartDataEntry(value: dollars1[i], xIndex: i))
-//        }
-//        
-//        // 2 - create a data set with our array
-//        let set1: LineChartDataSet = LineChartDataSet(yVals: yVals1,label:  nil)
-//        set1.axisDependency = .Left // Line will correlate with left axis values
-//        set1.setColor(UIColor.redColor().colorWithAlphaComponent(0.5)) // our line's opacity is 50%
-//        //set1.setCircleColor(UIColor.redColor()) // our circle will be dark red
-//        set1.lineWidth = 2.0
-//        //set1.circleRadius = 0.0 // the radius of the node circle
-//        set1.fillAlpha = 65 / 255.0
-//        set1.fillColor = UIColor.redColor()
-//        set1.highlightColor = UIColor.whiteColor()
-//        set1.drawCirclesEnabled = false
-//        
-//        //3 - create an array to store our LineChartDataSets
-//        var dataSets : [LineChartDataSet] = [LineChartDataSet]()
-//        dataSets.append(set1)
-//        
-//        //4 - pass our months in for our x-axis label value along with our dataSets
-//        let data: LineChartData = LineChartData(xVals: months, dataSets: dataSets)
-//        data.setValueTextColor(UIColor.whiteColor())
-////        data.ge
-//        //5 - finally set our data
-//        linechart.data = data
-//    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

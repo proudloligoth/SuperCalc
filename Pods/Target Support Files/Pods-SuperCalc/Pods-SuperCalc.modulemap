@@ -1,6 +1,0 @@
-framework module Pods_SuperCalc {
-  umbrella header "Pods-SuperCalc-umbrella.h"
-
-  export *
-  module * { export * }
-}
