@@ -16,7 +16,7 @@ class GraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let chartPointsData:[(Double,Double)] = [(-2, -2), (-1.1, -100.1), (4.5, 4),(4.3,9), (7, 1), (8, 100), (12, 3)]
-        drawgraph((-10,10), yAxisnum: (-10,10), chartPointsData: chartPointsData)
+        drawgraph((-10,10), yAxisnum: (-10,10), chartPointsData: generateXY())
         
         
     }
