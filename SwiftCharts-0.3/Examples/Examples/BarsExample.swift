@@ -117,7 +117,7 @@ class BarsExample: UIViewController {
             for button in [self.horizontal, self.vertical] {
                 button.titleLabel?.font = ExamplesDefaults.fontWithSize(14)
                 button.setTitleColor(UIColor.blueColor(), forState: .Normal)
-                button.addTarget(self, action: "buttonTapped:", forControlEvents: .TouchUpInside)
+                button.addTarget(self, action: #selector(DirSelector.buttonTapped(_:)), forControlEvents: .TouchUpInside)
             }
         }
         
@@ -136,7 +136,7 @@ class BarsExample: UIViewController {
                 ("v\(index)", view)
             }
             
-            let viewsDict = namedViews.reduce(Dictionary<String, UIView>()) {( u, tuple) in
+            var viewsDict = namedViews.reduce(Dictionary<String, UIView>()) {(var u, tuple) in
                 u[tuple.0] = tuple.1
                 return u
             }

@@ -68,7 +68,7 @@ class ScatterExample: UIViewController {
     private func toLayers(models: [(x: Double, y: Double, type: MyExampleModelDataType)], layerSpecifications: [MyExampleModelDataType : (shape: Shape, color: UIColor)], xAxis: ChartAxisLayer, yAxis: ChartAxisLayer, chartInnerFrame: CGRect) -> [ChartLayer] {
         
         // group chartpoints by type
-        let groupedChartPoints: Dictionary<MyExampleModelDataType, [ChartPoint]> = models.reduce(Dictionary<MyExampleModelDataType, [ChartPoint]>()) {(var dict, model) in
+        let groupedChartPoints: Dictionary<MyExampleModelDataType, [ChartPoint]> = models.reduce(Dictionary<MyExampleModelDataType, [ChartPoint]>()) {( var dict, model) in
             let chartPoint = ChartPoint(x: ChartAxisValueDouble(model.x), y: ChartAxisValueDouble(model.y))
             if dict[model.type] != nil {
                 dict[model.type]!.append(chartPoint)

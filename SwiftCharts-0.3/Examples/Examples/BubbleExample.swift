@@ -33,7 +33,7 @@ class BubbleExample: UIViewController {
             return colorBar.colorForPercentage(percentage).colorWithAlphaComponent(0.6)
         }
         
-        let chartPoints: [ChartPointBubble] = [
+        let chartPointsData = [
             (2, 2, 100, toColor(0)),
             (2.1, 5, 250, toColor(0)),
             (4, 4, 200, toColor(0.2)),
@@ -58,9 +58,11 @@ class BubbleExample: UIViewController {
             (11.5, 10, 150, toColor(0.7)),
             (12, 7, 120, toColor(0.9)),
             (12, 9, 250, toColor(0.8))
-            
-        ].map{ChartPointBubble(x: ChartAxisValueFloat(CGFloat($0), labelSettings: labelSettings), y: ChartAxisValueFloat(CGFloat($1)), diameterScalar: $2, bgColor: $3)}
+            ]
+        
+        let chartPoints : [ChartPointBubble] = chartPointsData.map{ChartPointBubble(x: ChartAxisValueFloat(CGFloat($0), labelSettings: labelSettings), y: ChartAxisValueFloat(CGFloat($1)), diameterScalar: 2.0, bgColor: $3)}
 
+        
         let xValues = (-2).stride(through: 14, by: 2).map {ChartAxisValueInt($0, labelSettings: labelSettings)}
         let yValues = (-2).stride(through: 12, by: 2).map {ChartAxisValueInt($0, labelSettings: labelSettings)}
 

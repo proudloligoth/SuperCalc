@@ -126,7 +126,7 @@ class StackedBarsExample: UIViewController {
             for button in [self.horizontal, self.vertical] {
                 button.titleLabel?.font = ExamplesDefaults.fontWithSize(14)
                 button.setTitleColor(UIColor.blueColor(), forState: .Normal)
-                button.addTarget(self, action: "buttonTapped:", forControlEvents: .TouchUpInside)
+                button.addTarget(self, action: #selector(DirSelector.buttonTapped(_:)), forControlEvents: .TouchUpInside)
             }
         }
         
