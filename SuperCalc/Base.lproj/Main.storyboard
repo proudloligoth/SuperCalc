@@ -650,7 +650,7 @@
         <!--Page View Controller-->
         <scene sceneID="NeX-rd-bZe">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="vH6-l7-P3o" customClass="PageViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="vH6-l7-P3o" customClass="PageViewController" customModule="SuperCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </pageViewController>

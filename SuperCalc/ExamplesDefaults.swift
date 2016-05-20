@@ -50,7 +50,7 @@ struct ExamplesDefaults {
     }
     
     static func chartFrame(containerBounds: CGRect) -> CGRect {
-        return CGRectMake(0, 70, containerBounds.size.width, containerBounds.size.height - 70)
+        return CGRectMake(-22, 0, containerBounds.size.width + 22, containerBounds.size.height - 63)
     }
     
     static var labelSettings: ChartLabelSettings {
