@@ -18,7 +18,7 @@ class CoordsExample: UIViewController {
         
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
-        let chartPoints = [(2, 2), (3, 1), (5, 9), (6, 7), (8, 10), (9, 9), (10, 15), (13, 8), (15, 20), (16, 17)].map{ChartPoint(x: ChartAxisValueInt($0.0), y: ChartAxisValueInt($0.1))}
+        let chartPoints = [(2, 2), (3, 1.5), (5, 9), (6, 7), (8, 10), (9, 9), (10, 15), (13, 8), (15, 20), (16, 17)].map{ChartPoint(x: ChartAxisValueDouble($0.0), y: ChartAxisValueDouble($0.1))}
         
         let xValues = ChartAxisValuesGenerator.generateXAxisValuesWithChartPoints(chartPoints, minSegmentCount: 7, maxSegmentCount: 7, multiple: 2, axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: false)
         let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints, minSegmentCount: 10, maxSegmentCount: 20, multiple: 2, axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: true)
@@ -96,7 +96,7 @@ class CoordsExample: UIViewController {
                 guidelinesLayer,
                 showCoordsLinesLayer,
                 chartPointsLineLayer,
-                chartPointsCircleLayer,
+                //chartPointsCircleLayer,
                 showCoordsTextLayer,
                 touchLayer,
                 
