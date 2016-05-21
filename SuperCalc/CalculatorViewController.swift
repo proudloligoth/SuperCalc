@@ -17,7 +17,7 @@ class CalculatorViewController: UIViewController {
     
     var numStack: [Double] = [] // Number stack
     var opStack: [String] = [] // Operator stack
-    
+    private let defaultHistoryText = " "
     var postfixString = " "
     var  oper = ""
     
@@ -34,7 +34,7 @@ class CalculatorViewController: UIViewController {
     func handleInput(str: String) {
         print("new input \(userInput)")
         ViewController.getnum(str)
-        if(str == "+" || str == "-" || str == "*" || str == "/") {
+        if(str == "+" || str == "-" || str == "×" || str == "÷"){
             lastOp = str
         }
         //        if str == "-" {
@@ -92,37 +92,41 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var textlabel: UILabel!
     
-    
-   
-
-   
-    
     @IBAction func btn_sine(sender: AnyObject) {
+        handleInput("sin(")
     }
-    
     @IBAction func btn_cos(sender: AnyObject) {
+        handleInput("cos(")
     }
-    
     @IBAction func btn_tan(sender: AnyObject) {
+        handleInput("tan(")
     }
-    
     @IBAction func btn_ln(sender: AnyObject) {
+        handleInput("ln")
     }
     @IBAction func btn_log(sender: AnyObject) {
+        handleInput("log₁₀")
     }
     @IBAction func btn_x(sender: AnyObject) {
+        handleInput("x")
     }
     @IBAction func btn_e(sender: AnyObject) {
+        handleInput("e")
     }
     @IBAction func btn_pi(sender: AnyObject) {
+        handleInput("π")
     }
     @IBAction func btn_square(sender: AnyObject) {
+         handleInput("^")
     }
     @IBAction func btn_openparen(sender: AnyObject) {
+        handleInput("(")
     }
     @IBAction func btn_closeparen(sender: AnyObject) {
+        handleInput(")")
     }
     @IBAction func btn_root(sender: AnyObject) {
+        handleInput("√")
     }
     @IBAction func btn_0(sender: AnyObject){
         handleInput("0")
@@ -161,14 +165,15 @@ class CalculatorViewController: UIViewController {
         handleInput("-")
     }
     @IBAction func btn_mul(sender: AnyObject) {
-        handleInput("x")
+        handleInput("×")
     }
     @IBAction func btn_div(sender: AnyObject) {
-        handleInput("/")
+        handleInput("÷")
         numPadPressData("/")
     }
     @IBAction func btn_del(sender: AnyObject) {
-        textlabel.text = ""
+        userInput.removeAll()
+        textlabel.text?.removeAll()
         
         
     }

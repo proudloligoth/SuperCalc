@@ -10,7 +10,7 @@ class ViewController: UIViewController {
 
     var pageViewController: UIPageViewController!
         
-    @IBOutlet public var textcal: UITextView!
+    @IBOutlet var textcal: UITextView!
     
     var labelcal = String()
     
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     class func getnum(num:String){
         print(num)
-        textcal.text
+        
     }
     /*
     // MARK: - Navigation
