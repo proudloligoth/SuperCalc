@@ -86,6 +86,16 @@ class GraphViewController: UIViewController {
             }
         }
     }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        if(size.height < size.width){
+            if(!Env.iPad){
+                boundsetting.hidden = true
+            }
+        }
+    }
+
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation){
         
         // Reload Data here
