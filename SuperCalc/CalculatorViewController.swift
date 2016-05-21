@@ -13,13 +13,23 @@ class CalculatorViewController: UIViewController {
     
     var accumulator: Double = 0.0 // Store the calculated value here
     var userInput = "" // User-entered digits
+    var currentInput = ""
     var lastOp = ""
+    var isNeg = false
+    var isFunc = false
+    var isNotinStack = false
     
     var numStack: [Double] = [] // Number stack
     var opStack: [String] = [] // Operator stack
+    var parenCount = 0
+    
     private let defaultHistoryText = " "
     var postfixString = " "
-    var  oper = ""
+    var oper = ""
+    
+    var calNumStack: [Double] = []
+    var calOpStack: [String] = []
+
     
     // Looks for a single character in a string.
     func hasIndex(stringToSearch str: String, characterToFind chr: Character) -> Bool {
@@ -33,51 +43,247 @@ class CalculatorViewController: UIViewController {
     
     func handleInput(str: String) {
         print("new input \(userInput)")
-        ViewController.getnum(str)
-        if(str == "+" || str == "-" || str == "×" || str == "÷"){
-            lastOp = str
+        if str == "+" || str == "-" || str == "×" || str == "÷" || str == "^" {
+            // change operator
+            if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" {
+                // clear last operation
+                userInput = String(userInput.characters.dropLast())
+                opStack.removeLast()
+            } else if userInput == "" {
+                isNeg = true
+            } else {
+                // add number
+                numStack.append(Double(currentInput)!)
+            }
+            lastOp = str                    // latest operator
+            currentInput = str              // current = operator
+            opStack.append(str)             // add operator to stack
+            isNotinStack = false            // all inputs are in stack
+            userInput += str                // update text
+            textlabel.text = userInput      // update label
+        } else if str == "sin(" || str == "cos(" || str == "tan(" || str == "ln(" || str == "log₁₀(" || str == "√(" {
+            // must follow operator
+            if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" || currentInput == "" {
+                currentInput = str
+                opStack.append(str)
+                isNotinStack = false
+                parenCount += 1
+                userInput += str
+                textlabel.text = userInput
+            }
+        } else if str == "e" {
+            // can follow any, but number
+            if Double(currentInput) != nil {
+                currentInput += "2.71828"       // e value
+                isNotinStack = true
+                userInput += str                // update text
+                textlabel.text = userInput      // update label
+            }
+        } else if str == "π" {
+            // can follow any, but number
+            if Double(currentInput) != nil {
+                currentInput += "3.14159"       // pi value
+                isNotinStack = true
+                userInput += str                // update text
+                textlabel.text = userInput      // update label
+            }
+        } else if str == "x" {
+            isFunc = true
+        } else if str == "(" {
+            if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" || currentInput == "" {
+                currentInput = str
+                opStack.append(str)
+                isNotinStack = false
+                userInput += str                // update text
+                textlabel.text = userInput      // update label
+                parenCount += 1
+            }
+        } else if str == ")" {
+            if parenCount > 0 {
+                currentInput = str
+                opStack.append(str)
+                isNotinStack = false
+                userInput += str                // update text
+                textlabel.text = userInput      // update label
+                parenCount += 1
+            }
+        } else {
+            // case number
+            // follow operator, reset
+            if Double(currentInput) == nil && currentInput != ")" {
+                currentInput = ""
+            }
+            if currentInput == ")" {
+                // do nothing
+            } else {
+                currentInput += str
+                isNotinStack = true
+                userInput += str                // update text
+                textlabel.text = userInput      // update label
+            }
+
         }
-        //        if str == "-" {
-        //            if userInput.hasPrefix(str) {
-        //                // Strip off the first character (a dash)
-        //                userInput = userInput.substringFromIndex(userInput.startIndex.successor())
-        //            } else {
-        //                userInput = str + userInput
-        //            }
-        //        } else {
-        //            userInput += str
-        //        }
-        userInput += str
-        
-        textlabel.text = userInput
     }
     
+    func doCalc() -> Double {
+        // all processes
+        return 0
+    }
     
     func displayAnswer() {
-        // If the value is an integer, don't show a decimal point
         print(userInput)
-        if userInput[userInput.endIndex.predecessor()] == lastOp[lastOp.endIndex.predecessor()] {
-            userInput = String(userInput.characters.dropLast())
+        print(numStack)
+        print(opStack)
+        if(numStack.count <= opStack.count) {
+            let diff = opStack.count - numStack.count
+            // put 0 at first until n nidex, n = diff(opStack,numStack)
+            for i in 0...diff {
+                numStack.insert(Double(0), atIndex: i)
+            }
+            print(numStack)
         }
-        let exp: NSExpression = NSExpression(format: userInput)
-        var result: Double = exp.expressionValueWithObject(nil, context: nil) as! Double
-        print(result)
-        var iAcc = Int(result)
-        if result - Double(iAcc) == 0 {
-            textlabel.text = String(iAcc)
+            
+        // do calculate
+        var ans = 0.0
+        calNumStack.append(numStack[0])
+        var isRightPre = false
+        var op = 0
+    
+        for num in 1..<numStack.count {
+            print("num loop : \(num) -> \(opStack[op])")
+            if opStack[op] == "+" {
+                if isRightPre {
+                    ans = doCalc()
+                    calNumStack.removeAll()
+                    calOpStack.removeAll()
+                    if ans >= 0 {
+                        calNumStack.append(ans)
+                    } else {
+                        calNumStack.append(0)
+                        calNumStack.append(abs(ans))
+                        calOpStack.append("-")
+                    }
+                    isRightPre = false
+                }
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "-" {
+                if isRightPre {
+                    ans = doCalc()
+                    calNumStack.removeAll()
+                    calOpStack.removeAll()
+                    if ans >= 0 {
+                        calNumStack.append(ans)
+                    } else {
+                        calNumStack.append(0)
+                        calNumStack.append(abs(ans))
+                        calOpStack.append("-")
+                    }
+                    isRightPre = false
+                }
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "×" {
+                isRightPre = true
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "÷" {
+                isRightPre = true
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "^" {
+                isRightPre = true
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "(" {
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "sin(" {
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "cos(" {
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "tan(" {
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "ln(" {
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "log₁₀(" {
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == "√(" {
+                calOpStack.append(opStack[op])
+                calNumStack.append(numStack[num])
+            } else if opStack[op] == ")" {
+                doCalc()
+            } else {
+                print("no operation \(opStack[op])")
+            }
+            op += 1
+        }
+        
+        if isRightPre {
+            ans = doCalc()
         } else {
-            textlabel.text = "\(result)"
+            print("\n do normal calc")
+            print(calNumStack)
+            print(calOpStack)
+            op = 0
+            ans = calNumStack[0]
+            for num in 1..<calNumStack.count {
+                if calOpStack[op] == "+" {
+                    ans = ans + calNumStack[num]
+                } else if calOpStack[op] == "-" {
+                    ans = ans - calNumStack[num]
+                } else {
+                    print("no operation \(calOpStack[op])")
+                }
+                op += 1
+                print("ans = \(ans)")
+            }
         }
-        result = 0
-        iAcc = 0
+        
+        calNumStack.removeAll()
+        calOpStack.removeAll()
+        
+        // display output
+        let iAcc = Int(ans)
+        if ans - Double(iAcc) == 0 {
+//            resultlabel.text = String(iAcc)
+        } else {
+//            resultlabel.text = "\(ans)"
+        }
     }
+
     
     func doEquals() {
-        print("ans of \(userInput)")
-        if userInput == "" {
-            return
+        print(userInput)
+        if isFunc {
+            // change to graph page
+        } else {
+            if isNotinStack {
+                numStack.append(Double(currentInput)!)
+                isNotinStack = false
+            }
+            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")"{
+                userInput = String(userInput.characters.dropLast())
+                currentInput = ""
+                opStack.removeLast()
+                textlabel.text = userInput
+            }
+            for i in 0..<parenCount {
+                userInput += ")"
+                opStack.append(")")
+                textlabel.text = userInput
+            }
+            print("ans of \(userInput)")
+            if userInput == "" {
+                return
+            }
+            displayAnswer()
         }
-        displayAnswer()
     }
     
 //    func InToPost(infixString: String){
@@ -87,8 +293,6 @@ class CalculatorViewController: UIViewController {
 //            var chValue = infixString.
 //        }
 //    }
-
-
     
     @IBOutlet weak var textlabel: UILabel!
     
@@ -102,10 +306,10 @@ class CalculatorViewController: UIViewController {
         handleInput("tan(")
     }
     @IBAction func btn_ln(sender: AnyObject) {
-        handleInput("ln")
+        handleInput("ln(")
     }
     @IBAction func btn_log(sender: AnyObject) {
-        handleInput("log₁₀")
+        handleInput("log₁₀(")
     }
     @IBAction func btn_x(sender: AnyObject) {
         handleInput("x")
@@ -126,7 +330,7 @@ class CalculatorViewController: UIViewController {
         handleInput(")")
     }
     @IBAction func btn_root(sender: AnyObject) {
-        handleInput("√")
+        handleInput("√(")
     }
     @IBAction func btn_0(sender: AnyObject){
         handleInput("0")
@@ -169,13 +373,18 @@ class CalculatorViewController: UIViewController {
     }
     @IBAction func btn_div(sender: AnyObject) {
         handleInput("÷")
-        numPadPressData("/")
+//        numPadPressData("/")
     }
     @IBAction func btn_del(sender: AnyObject) {
-        userInput.removeAll()
-        textlabel.text?.removeAll()
-        
-        
+        userInput = ""
+        currentInput = ""
+        numStack.removeAll()
+        opStack.removeAll()
+        calNumStack.removeAll()
+        calOpStack.removeAll()
+        textlabel.text = nil
+//        resultlabel.text = nil
+//        print("reset ans \(resultlabel.text)")
     }
     @IBAction func btn_equal(sender: AnyObject) {
         doEquals()
