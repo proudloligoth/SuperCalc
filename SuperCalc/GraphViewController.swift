@@ -16,7 +16,7 @@ class GraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let chartPointsData:[(Double,Double)] = [(-2, -2), (-1.1, -100.1), (4.5, 4),(4.3,9), (7, 1), (8, 100), (12, 3)]
-        drawgraph((-10,10), yAxisnum: (-10,10), chartPointsData: generateXY())
+        drawgraph((-5,5), yAxisnum: (-1,1), chartPointsData: generateXY())
         
         
     }
@@ -24,8 +24,8 @@ class GraphViewController: UIViewController {
         
     private func generateXY()->[(Double,Double)]{
         var out:[(Double,Double)] = []
-        for var x:Double = -5;x<=5;x+=0.01{
-            let y = sin(x)
+        for x:Double in (-5).stride(to: 5, by: 0.001){
+            let y:Double = sin(x)
             out.append((x,y))
         }
         return out
@@ -37,9 +37,9 @@ class GraphViewController: UIViewController {
         
         let chartPoints = chartPointsData.map{ChartPoint(x: ChartAxisValueDouble($0	.0, labelSettings: labelSettings), y: ChartAxisValueDouble($0.1))}
         
-        let xValues = ChartAxisValuesGenerator.generateXAxisValuesWithChartPoints(chartPoints, minSegmentCount: -20, maxSegmentCount:xAxisnum.1, multiple: ceil(xAxisnum.1/10), axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: true)
-        
-        let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints, minSegmentCount: yAxisnum.0-10, maxSegmentCount: yAxisnum.1+10, multiple: ceil(yAxisnum.1/15), axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: true)
+        let xValues = (xAxisnum.0).stride(through: xAxisnum.1, by: ((xAxisnum.1-xAxisnum.0)/10)).map {ChartAxisValueFloat(CGFloat($0), labelSettings: labelSettings)}
+
+        let yValues = (yAxisnum.0).stride(through: yAxisnum.1, by: ((yAxisnum.1-yAxisnum.0)/10)).map {ChartAxisValueFloat(CGFloat($0), labelSettings: labelSettings)}
         
         let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "x", settings: labelSettings))
         let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "y", settings: labelSettings.defaultVertical()))
