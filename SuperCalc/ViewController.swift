@@ -5,18 +5,20 @@
 //  Created by Starboy on 4/2/2559 BE.
 //  Copyright © 2559 Natnicha Thonket. All rights reserved.
 //
-
 import UIKit
-
 class ViewController: UIViewController {
 
     var pageViewController: UIPageViewController!
         
-    @IBOutlet weak var textcal: UITextView!
+    @IBOutlet public var textcal: UITextView!
+    
+    var labelcal = String()
+    
     
     internal var toPass:String!
     
     override func viewDidLoad() {
+        textcal.text = labelcal
         super.viewDidLoad()
         //textcal.text = toPass
         
@@ -71,13 +73,16 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "segueTest") {
-            var svc = segue.destinationViewController as! ViewController;
+            let svc = segue.destinationViewController as! ViewController;
             
             svc.toPass = textcal.text
             
         }
     }
-
+    class func getnum(num:String){
+        print(num)
+        textcal.text
+    }
     /*
     // MARK: - Navigation
 
