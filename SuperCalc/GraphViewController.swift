@@ -12,20 +12,32 @@ import SwiftCharts
 class GraphViewController: UIViewController {
 
     private var chart: Chart? // arc
+    private var xbound:(min:Double,max:Double) = (-5,5)
+    private var ybound:(min:Double,max:Double) = (-5,5)
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation){
+        
+        // Reload Data here
+        drawgraph((-5,5), yAxisnum: (-5,5), chartPointsData: generateXY((-5,5),ybound: (-5,5)))
+        removeChart()
+        self.view.setNeedsDisplay()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let chartPointsData:[(Double,Double)] = [(-2, -2), (-1.1, -100.1), (4.5, 4),(4.3,9), (7, 1), (8, 100), (12, 3)]
-        drawgraph((-5,5), yAxisnum: (-1,1), chartPointsData: generateXY())
         
+        drawgraph((-5,5), yAxisnum: (-5,5), chartPointsData: generateXY((-5,5),ybound: (-5,5)))
         
     }
     
+    private func generateXY(xbound:(min:Double,max:Double),ybound:(min:Double,max:Double))->[(Double,Double)]{
         
-    private func generateXY()->[(Double,Double)]{
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        let resolution :Double = abs(xbound.max-xbound.min)/Double(screenWidth)
         var out:[(Double,Double)] = []
-        for x:Double in (-5).stride(to: 5, by: 0.001){
-            let y:Double = tan(x)
+        for x:Double in (xbound.min).stride(to: xbound.max, by: resolution){
+            let y:Double = sin(2*x)+sin(x)+sin(3*x)
             out.append((x,y))
         }
         return out
@@ -69,9 +81,15 @@ class GraphViewController: UIViewController {
                 chartPointsTrackerLayer
             ]
         )
-        
+        chart.view.tag = 100
         self.view.addSubview(chart.view)
         self.chart = chart
+    }
+    
+    private func removeChart(){
+        if let viewWithTag = self.view.viewWithTag(100){
+            viewWithTag.removeFromSuperview()
+        }
     }
     
     
