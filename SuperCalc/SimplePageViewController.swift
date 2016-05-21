@@ -13,6 +13,12 @@ class SimplePageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for recognizer in self.gestureRecognizers {
+            if recognizer is UITapGestureRecognizer {
+                recognizer.enabled = false
+            }
+        }
+        
         dataSource = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
