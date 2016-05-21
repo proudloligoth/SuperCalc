@@ -24,7 +24,6 @@ class GraphViewController: UIViewController {
     @IBAction func xMinEdited(sender: AnyObject) {
         if let Min = xMin.text where !xMin.text!.isEmpty {
             if let Max = xMax.text where !xMax.text!.isEmpty{
-        
                 if(Double(Min) >= Double(Max)!){
                     xMin.textColor = UIColor.redColor()
                 }

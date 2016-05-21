@@ -481,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="169"/>
+            <point key="canvasLocation" x="401" y="220"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Vp-zO-7vp">
@@ -587,8 +587,12 @@
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeP-1c-pDa">
                                                                 <rect key="frame" x="61" y="0.0" width="25" height="30"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="xMinEdited:" destination="3fJ-Ed-bAq" eventType="editingDidEnd" id="1rj-FK-sEP"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" To " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-uM-Skh">
                                                                 <rect key="frame" x="86" y="5" width="28" height="20"/>
@@ -598,8 +602,12 @@
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-P6-Ugs">
                                                                 <rect key="frame" x="114" y="0.0" width="25" height="30"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="xMaxEdited:" destination="3fJ-Ed-bAq" eventType="editingDidEnd" id="ybM-jv-8jN"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -680,8 +688,12 @@
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rYI-vP-ezc">
                                                                 <rect key="frame" x="60" y="0.0" width="25" height="30"/>
+                                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                                <connections>
+                                                                    <action selector="yMinEdited:" destination="3fJ-Ed-bAq" eventType="editingDidEnd" id="xJN-4q-UvL"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" To " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH8-qy-awD">
                                                                 <rect key="frame" x="85" y="5" width="28" height="20"/>
@@ -691,6 +703,7 @@
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hp-tV-rS0">
                                                                 <rect key="frame" x="113" y="0.0" width="25" height="30"/>
+                                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="phh-cG-7p2"/>
                                                                 </constraints>
@@ -707,6 +720,9 @@
                                                                         <include reference="phh-cG-7p2"/>
                                                                     </mask>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="yMaxEdited:" destination="3fJ-Ed-bAq" eventType="editingDidEnd" id="j13-ih-Qc0"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
