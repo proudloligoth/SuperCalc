@@ -20,13 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //textcal.text = toPass
         
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
-        let textcalheight = textcal.frame.size.height
-        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
-        self.pageViewController.view.frame = CGRectMake(0, textcalheight+statusBarHeight, self.view.frame.size.width, self.view.frame.size.height - textcalheight - statusBarHeight)
-        self.addChildViewController(self.pageViewController)
-        self.view.addSubview(self.pageViewController.view)
-        self.pageViewController.didMoveToParentViewController(self)
+        loadPageSwitch()
         
         textcal.layer.shadowColor = UIColor.blackColor().CGColor
         textcal.layer.shadowOpacity = 1
@@ -39,6 +33,33 @@ class ViewController: UIViewController {
 //        textcal.layer.shadowRadius = 5
         // Do any additional setup after loading the view.
     }
+    
+    private func removePageSwitch(){
+        if let viewWithTag = self.view.viewWithTag(10){
+            viewWithTag.removeFromSuperview()
+        }
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation){
+        
+        // Reload Data here
+        removePageSwitch()
+        loadPageSwitch()
+        self.view.setNeedsDisplay()
+        
+    }
+    
+    private func loadPageSwitch(){
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
+        let textcalheight = textcal.frame.size.height
+        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
+        self.pageViewController.view.frame = CGRectMake(0, textcalheight+statusBarHeight, self.view.frame.size.width, self.view.frame.size.height - textcalheight - statusBarHeight)
+        self.addChildViewController(self.pageViewController)
+        self.pageViewController.view.tag = 10
+        self.view.addSubview(self.pageViewController.view)
+        self.pageViewController.didMoveToParentViewController(self)
+    }
+    
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
 
