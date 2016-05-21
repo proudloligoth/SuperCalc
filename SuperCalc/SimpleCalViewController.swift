@@ -35,6 +35,7 @@ class SimpleCalViewController: UIViewController {
     var currentInput = ""
     var lastOp = ""
     var isNeg = false
+    var isNotinStack = false
     
     var numStack: [Double] = [] // Number stack
     var opStack: [String] = [] // Operator stack
@@ -68,16 +69,13 @@ class SimpleCalViewController: UIViewController {
             lastOp = str
             currentInput = str
             opStack.append(str)
-        } else if str == "" {
-            if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" {
-                currentInput = ""
-            }
-            numStack.append(Double(currentInput)!)
+            isNotinStack = false
         } else {
             if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" {
                 currentInput = ""
             }
             currentInput += str
+            isNotinStack = true
         }
         userInput += str
         textlabel.text = userInput
@@ -112,6 +110,7 @@ class SimpleCalViewController: UIViewController {
     }
     
     func displayAnswer() {
+        print("\n display answer")
         print(userInput)
         print(numStack)
         print(opStack)
@@ -131,6 +130,7 @@ class SimpleCalViewController: UIViewController {
         var op = 0
         
         for num in 1..<numStack.count {
+            print(op)
             print("num loop : \(num) -> \(opStack[op])")
             if opStack[op] == "+" {
                 if isRightPre {
@@ -198,6 +198,9 @@ class SimpleCalViewController: UIViewController {
             }
         }
         
+        calNumStack.removeAll()
+        calOpStack.removeAll()
+        
         // display output
         let iAcc = Int(ans)
         if ans - Double(iAcc) == 0 {
@@ -208,7 +211,16 @@ class SimpleCalViewController: UIViewController {
     }
     
     func doEquals() {
-        handleInput("")
+        if isNotinStack {
+            numStack.append(Double(currentInput)!)
+            isNotinStack = false
+        }
+        if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" {
+            userInput = String(userInput.characters.dropLast())
+            currentInput = ""
+            opStack.removeLast()
+            textlabel.text = userInput
+        }
         print("ans of \(userInput)")
         if userInput == "" {
             return
