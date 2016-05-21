@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     internal var toPass:String!
     
     override func viewDidLoad() {
-        textcal.text = labelcal
+        
         super.viewDidLoad()
+        textcal.text = labelcal
         //textcal.text = toPass
         
         loadPageSwitch()
@@ -71,14 +72,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "segueTest") {
-            let svc = segue.destinationViewController as! ViewController;
-            
-            svc.toPass = textcal.text
-            
-        }
-    }
     class func getnum(num:String){
         print(num)
         

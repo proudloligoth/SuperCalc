@@ -17,9 +17,10 @@
 		F234103B1CAF12E10002A3DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234103A1CAF12E10002A3DC /* ViewController.swift */; };
 		F23410401CB073A70002A3DC /* SimplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234103F1CB073A70002A3DC /* SimplePageViewController.swift */; };
 		F23410421CB077B30002A3DC /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23410411CB077B30002A3DC /* SimpleViewController.swift */; };
-		F2B575481CEF0FEA00F549AE /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B575471CEF0FEA00F549AE /* SwiftCharts.framework */; };
 		F2B5754B1CEF108000F549AE /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B575491CEF108000F549AE /* Env.swift */; };
 		F2B5754C1CEF108000F549AE /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5754A1CEF108000F549AE /* ExamplesDefaults.swift */; };
+		F2B575711CF0CF4D00F549AE /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4E32011CEF141900CD2F07 /* SwiftCharts.framework */; };
+		F2B575721CF0CF4D00F549AE /* SwiftCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4E32011CEF141900CD2F07 /* SwiftCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2FAB2E61CAB0614008B4D8E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */; };
 		F2FAB2EA1CAB0E05008B4D8E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2E91CAB0E05008B4D8E /* CalculatorViewController.swift */; };
 		F2FAB2EC1CAB1288008B4D8E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAB2EB1CAB1288008B4D8E /* GraphViewController.swift */; };
@@ -54,6 +55,13 @@
 			remoteGlobalIDString = 06342AC11B8AAD7F001C9F5D;
 			remoteInfo = Examples;
 		};
+		F2B575731CF0CF4D00F549AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06405DA51B8AA74700A689FF;
+			remoteInfo = SwiftCharts;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F2B575721CF0CF4D00F549AE /* SwiftCharts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +96,6 @@
 		F234103F1CB073A70002A3DC /* SimplePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePageViewController.swift; sourceTree = "<group>"; };
 		F23410411CB077B30002A3DC /* SimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 		F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCharts.xcodeproj; path = "SwiftCharts-0.3/SwiftCharts.xcodeproj"; sourceTree = "<group>"; };
-		F2B575471CEF0FEA00F549AE /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = "SwiftCharts-0.3/build/Debug-iphoneos/SwiftCharts.framework"; sourceTree = "<group>"; };
 		F2B575491CEF108000F549AE /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F2B5754A1CEF108000F549AE /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		F2FAB2E51CAB0614008B4D8E /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B575481CEF0FEA00F549AE /* SwiftCharts.framework in Frameworks */,
+				F2B575711CF0CF4D00F549AE /* SwiftCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +132,6 @@
 		2FA5319B1CA0293700662B67 = {
 			isa = PBXGroup;
 			children = (
-				F2B575471CEF0FEA00F549AE /* SwiftCharts.framework */,
 				F2B574A51CEF0E8800F549AE /* SwiftCharts.xcodeproj */,
 				2FA531A61CA0293800662B67 /* SuperCalc */,
 				2FA531BB1CA0293800662B67 /* SuperCalcTests */,
@@ -206,6 +213,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F2B575741CF0CF4D00F549AE /* PBXTargetDependency */,
 			);
 			name = SuperCalc;
 			productName = SuperCalc;
@@ -387,6 +395,11 @@
 			isa = PBXTargetDependency;
 			target = 2FA531A31CA0293700662B67 /* SuperCalc */;
 			targetProxy = 2FA531C41CA0293800662B67 /* PBXContainerItemProxy */;
+		};
+		F2B575741CF0CF4D00F549AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCharts;
+			targetProxy = F2B575731CF0CF4D00F549AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

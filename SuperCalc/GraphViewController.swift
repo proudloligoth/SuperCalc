@@ -11,6 +11,7 @@ import SwiftCharts
 
 class GraphViewController: UIViewController {
 
+    @IBOutlet weak var boundsetting: UIStackView!
     private var chart: Chart? // arc
     private var xbound:(min:Double,max:Double) = (-5,5)
     private var ybound:(min:Double,max:Double) = (-5,5)
@@ -45,6 +46,8 @@ class GraphViewController: UIViewController {
     
     
     private func drawgraph(xAxisnum: (Double,Double),yAxisnum: (Double,Double),chartPointsData: [(Double,Double)]){
+        
+        
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
         let chartPoints = chartPointsData.map{ChartPoint(x: ChartAxisValueDouble($0	.0, labelSettings: labelSettings), y: ChartAxisValueDouble($0.1))}
@@ -56,7 +59,10 @@ class GraphViewController: UIViewController {
         let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "x", settings: labelSettings))
         let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "y", settings: labelSettings.defaultVertical()))
         
-        let chartFrame = ExamplesDefaults.chartFrame(self.view.bounds)
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
+        let textcalheight = boundsetting.frame.size.height
+        
+        let chartFrame = CGRectMake(-7, textcalheight+statusBarHeight, self.view.bounds.size.width, (self.view.bounds.size.height - textcalheight - statusBarHeight-80))
         
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: ExamplesDefaults.chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
         let (xAxis, yAxis, innerFrame) = (coordsSpace.xAxis, coordsSpace.yAxis, coordsSpace.chartInnerFrame)

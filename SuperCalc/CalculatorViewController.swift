@@ -180,7 +180,7 @@ class CalculatorViewController: UIViewController {
     @IBAction func btn_equal(sender: AnyObject) {
         doEquals()
     }
-
+    
     @IBAction func btn_dot(sender: AnyObject) {
         var allNum = userInput.componentsSeparatedByString(lastOp)
         let latestNum = allNum[allNum.count-1]
@@ -188,7 +188,6 @@ class CalculatorViewController: UIViewController {
             handleInput(".")
         }
     }
-    
     func numPadPressData(num:String) -> String{
         return num
     }
