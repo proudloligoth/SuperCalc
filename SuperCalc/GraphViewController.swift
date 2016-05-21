@@ -102,7 +102,7 @@ class GraphViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        xMin.text = "\(xbound.min)"
+        xMin.text = "\(self.xbound.min)"
         xMax.text = "\(xbound.max)"
         yMin.text = "\(ybound.min)"
         yMax.text = "\(ybound.max)"
