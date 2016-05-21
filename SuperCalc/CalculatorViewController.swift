@@ -10,91 +10,6 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
-//    public String InToPost(String infixString) {
-//    String postfixString = " ";
-//    String oper = "";
-//    infixString += " ";
-//    for (int index = 0; index < infixString.length() - 1; ++index) {
-//    String chValue = String.valueOf(infixString.charAt(index));
-//    if (null != chValue) {
-//    switch (chValue) {
-//    case "(":
-//    push("(");
-//    break;
-//    case ")":
-//    oper = peek();
-//    while (!(oper.equals("(")) && !(isEmpty())) {
-//    postfixString += (oper + " ");
-//    pop();
-//    
-//    oper = peek();
-//    
-//    }
-//    pop();
-//    break;
-//    case "+":
-//    case "-":
-//    //Stack is empty
-//    if (isEmpty()) {
-//    push(chValue);
-//    //current Stack is not empty
-//    } else {
-//    oper = peek();
-//    while (!(isEmpty() || oper.equals("(") || oper.equals(")"))) {
-//    pop();
-//    postfixString += (oper + " ");
-//    }
-//    push(chValue);
-//    }
-//    break;
-//    case "*":
-//    case "/":
-//    if (isEmpty()) {
-//    push(chValue);
-//    } else {
-//    oper = peek();
-//    while (!oper.equals("+") && !oper.equals("-") && !isEmpty()) {
-//    pop();
-//    postfixString += (oper + " ");
-//    }
-//    push(chValue);
-//    }
-//    break;
-//    default:
-//    if (index + 1 < infixString.length()) {
-//    if (Character.isDigit(infixString.charAt(index + 1)) || infixString.charAt(index + 1) == '.') {
-//    postfixString += (chValue);
-//    } else {
-//    postfixString += (chValue + " ");
-//    }
-//    }
-//    
-//    break;
-//    }
-//    }
-//    }
-//    
-//    while (!isEmpty()) {
-//    oper = peek();
-//    if (!oper.equals("(")) {
-//    pop();
-//    postfixString += (oper + " ");
-//    }
-//    }
-//    
-//    return postfixString;
-//    }
-//    
-//    func InToPost(infixString: String){
-//        var postfixString = " "
-//        var  oper = ""
-//        var chValue = ""
-//        // infixString += " "
-//        for index in infixString.characters{
-//           chValue = infixString[index]
-//        }
-//    }
-    
     
     var accumulator: Double = 0.0 // Store the calculated value here
     var userInput = "" // User-entered digits
@@ -102,6 +17,9 @@ class CalculatorViewController: UIViewController {
     
     var numStack: [Double] = [] // Number stack
     var opStack: [String] = [] // Operator stack
+    
+    var postfixString = " "
+    var  oper = ""
     
     // Looks for a single character in a string.
     func hasIndex(stringToSearch str: String, characterToFind chr: Character) -> Bool {
@@ -115,6 +33,7 @@ class CalculatorViewController: UIViewController {
     
     func handleInput(str: String) {
         print("new input \(userInput)")
+        ViewController.getnum(str)
         if(str == "+" || str == "-" || str == "*" || str == "/") {
             lastOp = str
         }
@@ -129,6 +48,7 @@ class CalculatorViewController: UIViewController {
         //            userInput += str
         //        }
         userInput += str
+        
         textlabel.text = userInput
     }
     
@@ -160,9 +80,18 @@ class CalculatorViewController: UIViewController {
         displayAnswer()
     }
     
+//    func InToPost(infixString: String){
+//        
+//        // infixString += " "
+//        for c in infixString.characters{
+//            var chValue = infixString.
+//        }
+//    }
+
 
     
     @IBOutlet weak var textlabel: UILabel!
+    
     
    
 
@@ -236,9 +165,11 @@ class CalculatorViewController: UIViewController {
     }
     @IBAction func btn_div(sender: AnyObject) {
         handleInput("/")
+        numPadPressData("/")
     }
     @IBAction func btn_del(sender: AnyObject) {
         textlabel.text = ""
+        
         
     }
     @IBAction func btn_equal(sender: AnyObject) {
@@ -257,15 +188,7 @@ class CalculatorViewController: UIViewController {
         return num
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -276,4 +199,25 @@ class CalculatorViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        var destination: ViewController = segue.destinationViewController as ViewController
+//       
+//        if let vc = destination as? ViewController {
+//            destination?.labelcal = textlabel.text
+//        }
+//        let DestViewController : ViewController = segue.destinationViewController as! ViewController
+//        DestViewController.labelcal = textlabel.text!
+//        
+//        
+//    }
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }
