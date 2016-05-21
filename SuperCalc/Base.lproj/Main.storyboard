@@ -68,9 +68,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_sine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vMh-Gy-Oa9"/>
                                                                 </connections>
@@ -83,9 +80,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="165" width="60" height="166"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_cos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfj-fa-y1V"/>
                                                                 </connections>
@@ -99,9 +93,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="331" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_tan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hzh-Vi-FRf"/>
                                                                 </connections>
@@ -114,17 +105,12 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="496" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_ln:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnj-YN-6js"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <variation key="heightClass=compact" axis="vertical" misplaced="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="661"/>
-                                                        </variation>
+                                                        <variation key="heightClass=compact" axis="vertical"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Uf-KO-tQy">
                                                         <rect key="frame" x="0.0" y="79" width="414" height="79"/>
@@ -137,9 +123,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_log:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSL-6W-LUh"/>
                                                                 </connections>
@@ -152,9 +135,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="165" width="60" height="166"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_x:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNz-gW-XTY"/>
                                                                 </connections>
@@ -167,9 +147,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="331" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_e:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6E-CD-bFW"/>
                                                                 </connections>
@@ -182,17 +159,12 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="496" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_pi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7w-dK-hnW"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <variation key="heightClass=compact" axis="vertical" misplaced="YES">
-                                                            <rect key="frame" x="60" y="0.0" width="60" height="661"/>
-                                                        </variation>
+                                                        <variation key="heightClass=compact" axis="vertical"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sUS-kh-M11">
                                                         <rect key="frame" x="0.0" y="158" width="414" height="79"/>
@@ -205,9 +177,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_square:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCz-tV-DfT"/>
                                                                 </connections>
@@ -220,9 +189,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="165" width="60" height="166"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_openparen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBp-aM-U5V"/>
                                                                 </connections>
@@ -235,9 +201,6 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="331" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_closeparen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGh-dm-JFl"/>
                                                                 </connections>
@@ -250,24 +213,17 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="496" width="60" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_root:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJ6-vW-sMz"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <variation key="heightClass=compact" axis="vertical" misplaced="YES">
-                                                            <rect key="frame" x="120" y="0.0" width="60" height="661"/>
-                                                        </variation>
+                                                        <variation key="heightClass=compact" axis="vertical"/>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.51742739240000002" blue="0.011647161119999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.37647194029999997" green="0.89757612180000002" blue="0.84746642999999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <variation key="heightClass=compact" axis="horizontal" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="661"/>
-                                                </variation>
+                                                <variation key="heightClass=compact" axis="horizontal"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m8F-48-yfp" userLabel="NumberStack">
                                                 <rect key="frame" x="0.0" y="237" width="414" height="425"/>
@@ -283,9 +239,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="58" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1w7-ek-ccR"/>
                                                                 </connections>
@@ -298,9 +251,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="165" width="58" height="166"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8FZ-q3-v6j"/>
                                                                 </connections>
@@ -313,9 +263,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="331" width="58" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABV-jR-klq"/>
                                                                 </connections>
@@ -328,17 +275,11 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="496" width="58" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntp-S7-Evf"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <variation key="heightClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="58" height="661"/>
-                                                        </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ddh-Hu-EcH">
                                                         <rect key="frame" x="104" y="0.0" width="104" height="425"/>
@@ -351,9 +292,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="59" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3e2-J1-D1F"/>
                                                                 </connections>
@@ -366,9 +304,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="165" width="59" height="166"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="knN-uY-Jct"/>
                                                                 </connections>
@@ -381,9 +316,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="331" width="59" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOy-Rj-3H3"/>
                                                                 </connections>
@@ -396,17 +328,11 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="496" width="59" height="165"/>
-                                                                </variation>
                                                                 <connections>
-                                                                    <action selector="btn_dot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vui-gc-hft"/>
+                                                                    <action selector="btn_dot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVC-s2-zZg"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <variation key="heightClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="58" y="0.0" width="59" height="661"/>
-                                                        </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1si-ea-7hQ">
                                                         <rect key="frame" x="207" y="0.0" width="104" height="425"/>
@@ -419,9 +345,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="58" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R43-fo-6Lk"/>
                                                                 </connections>
@@ -434,9 +357,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="165" width="58" height="166"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lhB-F7-3MH"/>
                                                                 </connections>
@@ -449,9 +369,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="331" width="58" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcP-PU-NjV"/>
                                                                 </connections>
@@ -464,17 +381,11 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="496" width="58" height="165"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_equal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USp-wI-nHY"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <variation key="heightClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="117" y="0.0" width="58" height="661"/>
-                                                        </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bho-A2-Kz4">
                                                         <rect key="frame" x="311" y="0.0" width="104" height="425"/>
@@ -486,9 +397,6 @@
                                                                 <state key="normal" title="DEL">
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="59" height="132"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_del:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZ8-Db-d4h"/>
                                                                 </connections>
@@ -501,9 +409,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="132" width="59" height="132"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_div:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XH9-Ev-Rwn"/>
                                                                 </connections>
@@ -516,9 +421,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="264" width="59" height="133"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_mul:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fka-jx-Ku0"/>
                                                                 </connections>
@@ -531,9 +433,6 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="397" width="59" height="132"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihE-c6-VcA"/>
                                                                 </connections>
@@ -546,22 +445,13 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="529" width="59" height="132"/>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="btn_plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRj-VM-sDF"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <variation key="heightClass=compact" misplaced="YES">
-                                                            <rect key="frame" x="175" y="0.0" width="59" height="661"/>
-                                                        </variation>
                                                     </stackView>
                                                 </subviews>
-                                                <variation key="heightClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="180" y="0.0" width="234" height="661"/>
-                                                </variation>
                                             </stackView>
                                         </subviews>
                                         <variation key="heightClass=compact" axis="horizontal" distribution="fillProportionally"/>
@@ -653,7 +543,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAr-JR-Wh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738.5" y="-577.5"/>
+            <point key="canvasLocation" x="758.5" y="-445.5"/>
         </scene>
         <!--Graph View Controller-->
         <scene sceneID="g6W-vr-WdN">
@@ -664,26 +554,230 @@
                         <viewControllerLayoutGuide type="bottom" id="isf-X7-I8m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ePb-16-phI" userLabel="ChartView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-OS-Vr5" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="20" width="379" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hFm-Fl-ofn" userLabel="chartandsetting">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="SMM-d0-G0L" userLabel="Setting">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                        <subviews>
+                                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="h4J-e0-sOd" userLabel="ViewX">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="center" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YJe-SZ-jjP">
+                                                        <rect key="frame" x="91" y="0.0" width="139" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G63-KE-gjy">
+                                                                <rect key="frame" x="0.0" y="2" width="12" height="26"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="12" id="N4e-Vt-qG4"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.1101273109" green="0.6884037502" blue="0.91439376829999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" From " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVo-ED-QS8">
+                                                                <rect key="frame" x="12" y="5" width="49" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeP-1c-pDa">
+                                                                <rect key="frame" x="61" y="0.0" width="25" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" To " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-uM-Skh">
+                                                                <rect key="frame" x="86" y="5" width="28" height="20"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-P6-Ugs">
+                                                                <rect key="frame" x="114" y="0.0" width="25" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="qeP-1c-pDa" firstAttribute="leading" secondItem="YJe-SZ-jjP" secondAttribute="leading" id="bkP-DS-LoA"/>
+                                                            <constraint firstItem="NFP-P6-Ugs" firstAttribute="leading" secondItem="YJe-SZ-jjP" secondAttribute="leadingMargin" id="cnu-IZ-Emk"/>
+                                                            <constraint firstItem="G63-KE-gjy" firstAttribute="top" secondItem="YJe-SZ-jjP" secondAttribute="top" constant="2" id="ikr-qb-wRT">
+                                                                <variation key="heightClass=compact" constant="0.0"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="trailing" secondItem="qeP-1c-pDa" secondAttribute="trailing" id="oJk-gy-otB"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="NFP-P6-Ugs" secondAttribute="trailing" id="oyk-Y5-SCT"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="bkP-DS-LoA"/>
+                                                                <exclude reference="oJk-gy-otB"/>
+                                                                <exclude reference="cnu-IZ-Emk"/>
+                                                                <exclude reference="oyk-Y5-SCT"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=compact" axis="vertical" distribution="equalSpacing">
+                                                            <mask key="constraints">
+                                                                <include reference="bkP-DS-LoA"/>
+                                                                <include reference="oJk-gy-otB"/>
+                                                                <include reference="cnu-IZ-Emk"/>
+                                                                <include reference="oyk-Y5-SCT"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="YJe-SZ-jjP" firstAttribute="top" secondItem="h4J-e0-sOd" secondAttribute="top" id="L6k-hp-LHU"/>
+                                                    <constraint firstAttribute="width" constant="48" id="P9j-jh-J23"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YJe-SZ-jjP" secondAttribute="bottom" id="RAW-6D-ZdQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YJe-SZ-jjP" secondAttribute="trailing" id="gg5-kN-HYl"/>
+                                                    <constraint firstItem="YJe-SZ-jjP" firstAttribute="top" secondItem="h4J-e0-sOd" secondAttribute="top" id="jkD-WX-vK0"/>
+                                                    <constraint firstItem="YJe-SZ-jjP" firstAttribute="leading" secondItem="h4J-e0-sOd" secondAttribute="leading" id="oiv-Yy-fgp"/>
+                                                    <constraint firstItem="YJe-SZ-jjP" firstAttribute="centerX" secondItem="h4J-e0-sOd" secondAttribute="centerX" id="qzE-YQ-oY7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YJe-SZ-jjP" secondAttribute="bottom" id="tUc-5c-t5d"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="P9j-jh-J23"/>
+                                                        <exclude reference="L6k-hp-LHU"/>
+                                                        <exclude reference="gg5-kN-HYl"/>
+                                                        <exclude reference="oiv-Yy-fgp"/>
+                                                        <exclude reference="tUc-5c-t5d"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="P9j-jh-J23"/>
+                                                        <include reference="L6k-hp-LHU"/>
+                                                        <include reference="gg5-kN-HYl"/>
+                                                        <include reference="oiv-Yy-fgp"/>
+                                                        <include reference="tUc-5c-t5d"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="MRB-LV-UdK" userLabel="ViewY">
+                                                <rect key="frame" x="0.0" y="33" width="320" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2pM-1q-530">
+                                                        <rect key="frame" x="91" y="0.0" width="138" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy5-Ax-GVU">
+                                                                <rect key="frame" x="0.0" y="5" width="11" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.425293789668025" green="0.82007211538461533" blue="0.30956192655494091" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" From " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhF-u1-2QM">
+                                                                <rect key="frame" x="11" y="5" width="49" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rYI-vP-ezc">
+                                                                <rect key="frame" x="60" y="0.0" width="25" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" To " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH8-qy-awD">
+                                                                <rect key="frame" x="85" y="5" width="28" height="20"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hp-tV-rS0">
+                                                                <rect key="frame" x="113" y="0.0" width="25" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="phh-cG-7p2"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="phh-cG-7p2"/>
+                                                                    </mask>
+                                                                </variation>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="118" width="50" height="30"/>
+                                                                    <mask key="constraints">
+                                                                        <include reference="phh-cG-7p2"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="8hp-tV-rS0" firstAttribute="leading" secondItem="2pM-1q-530" secondAttribute="leading" id="Bf2-x8-zvw"/>
+                                                            <constraint firstItem="FH8-qy-awD" firstAttribute="leading" secondItem="2pM-1q-530" secondAttribute="leading" constant="10" id="Kht-kx-dVU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="rYI-vP-ezc" secondAttribute="trailing" id="P3c-mZ-kkN"/>
+                                                            <constraint firstAttribute="trailing" secondItem="8hp-tV-rS0" secondAttribute="trailing" id="ZNC-XO-UH9"/>
+                                                            <constraint firstItem="rYI-vP-ezc" firstAttribute="leading" secondItem="2pM-1q-530" secondAttribute="leading" id="aFS-vj-VCZ"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="P3c-mZ-kkN"/>
+                                                                <exclude reference="aFS-vj-VCZ"/>
+                                                                <exclude reference="Kht-kx-dVU"/>
+                                                                <exclude reference="Bf2-x8-zvw"/>
+                                                                <exclude reference="ZNC-XO-UH9"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=compact" axis="vertical" distribution="equalSpacing">
+                                                            <mask key="constraints">
+                                                                <include reference="P3c-mZ-kkN"/>
+                                                                <include reference="aFS-vj-VCZ"/>
+                                                                <include reference="Kht-kx-dVU"/>
+                                                                <include reference="Bf2-x8-zvw"/>
+                                                                <include reference="ZNC-XO-UH9"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="2pM-1q-530" firstAttribute="centerX" secondItem="MRB-LV-UdK" secondAttribute="centerX" id="7aX-26-G5e"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2pM-1q-530" secondAttribute="bottom" id="Sky-86-SdH"/>
+                                                    <constraint firstItem="2pM-1q-530" firstAttribute="top" secondItem="MRB-LV-UdK" secondAttribute="top" id="kFj-Ph-tia"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="h4J-e0-sOd" firstAttribute="top" secondItem="SMM-d0-G0L" secondAttribute="top" id="Fcf-rx-e4e"/>
+                                            <constraint firstItem="h4J-e0-sOd" firstAttribute="leading" secondItem="SMM-d0-G0L" secondAttribute="leading" id="NjU-B3-1PM"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact" axis="vertical"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-OS-Vr5" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="63" width="320" height="485"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SMM-d0-G0L" firstAttribute="leading" secondItem="hFm-Fl-ofn" secondAttribute="leading" id="B1U-UR-Pfs"/>
+                                </constraints>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fill"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cj3-OS-Vr5" secondAttribute="trailing" constant="-20" id="D0a-PV-MDz"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Cj3-OS-Vr5" secondAttribute="bottom" id="LAT-s3-fGk"/>
-                            <constraint firstItem="Cj3-OS-Vr5" firstAttribute="top" secondItem="1Wd-2y-msL" secondAttribute="bottom" id="TN5-ZJ-HLM"/>
-                            <constraint firstItem="Cj3-OS-Vr5" firstAttribute="leading" secondItem="ePb-16-phI" secondAttribute="leading" id="boJ-4n-0xW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cj3-OS-Vr5" secondAttribute="trailing" constant="-20" id="fV1-fq-dCy"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Cj3-OS-Vr5" secondAttribute="bottom" id="iqq-Nj-oFo"/>
+                            <constraint firstItem="hFm-Fl-ofn" firstAttribute="top" secondItem="1Wd-2y-msL" secondAttribute="bottom" id="9kn-4c-KSx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hFm-Fl-ofn" secondAttribute="bottom" id="CrW-ke-6BK"/>
+                            <constraint firstItem="hFm-Fl-ofn" firstAttribute="top" secondItem="1Wd-2y-msL" secondAttribute="bottom" id="Gwz-5p-oMe"/>
+                            <constraint firstItem="hFm-Fl-ofn" firstAttribute="leading" secondItem="ePb-16-phI" secondAttribute="leading" id="ITf-Lv-OPb"/>
+                            <constraint firstItem="hFm-Fl-ofn" firstAttribute="leading" secondItem="ePb-16-phI" secondAttribute="leading" id="JfB-FO-0Av"/>
+                            <constraint firstAttribute="trailing" secondItem="hFm-Fl-ofn" secondAttribute="trailing" id="Rmj-22-FCM"/>
+                            <constraint firstItem="isf-X7-I8m" firstAttribute="top" secondItem="hFm-Fl-ofn" secondAttribute="bottom" id="aNo-ZZ-pzV"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="boundsetting" destination="SMM-d0-G0L" id="ykk-je-QrO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUQ-Vy-LPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
