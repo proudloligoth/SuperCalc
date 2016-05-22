@@ -24,6 +24,9 @@ class GraphViewController: CalculatorViewController {
     private var xbound:(min:Double,max:Double) = (-5,5)
     private var ybound:(min:Double,max:Double) = (-5,5)
     
+    private var chartdata:[(Double,Double)] = [(0,0)]
+    private var input = "x"
+    
     @IBAction func xDataEdited(sender: AnyObject) {
         if let data = xData.text where !xData.text!.isEmpty {
             
@@ -115,7 +118,7 @@ class GraphViewController: CalculatorViewController {
     
     private func updategraph(){
         removeChart()
-        drawgraph(self.xbound, yAxisnum: self.ybound, chartPointsData: generateXY(self.xbound,ybound:self.ybound))
+        drawgraph(self.xbound, yAxisnum: self.ybound, chartPointsData: generateXY(self.xbound,ybound:self.ybound, input: self.input ))
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,7 +143,7 @@ class GraphViewController: CalculatorViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        drawgraph(xbound, yAxisnum: ybound, chartPointsData: generateXY(xbound,ybound:ybound))
+        //drawgraph(xbound, yAxisnum: ybound, chartPointsData: generateXY(xbound,ybound:ybound))
     }
     
     private func generateXY(xbound:(min:Double,max:Double),ybound:(min:Double,max:Double))->[(Double,Double)]{
@@ -158,8 +161,9 @@ class GraphViewController: CalculatorViewController {
     
     private func convertString(input:String){
         if ((input.rangeOfString("x")) != nil) {
-            
-            generateXY(self.xbound,ybound:self.ybound, input: input)
+            self.input = input
+            updategraph()
+//            drawgraph(self.xbound, yAxisnum: self.ybound, chartPointsData: generateXY(self.xbound,ybound:self.ybound, input: self.input ))
         }
     }
     
@@ -170,7 +174,7 @@ class GraphViewController: CalculatorViewController {
         let resolution :Double = abs(xbound.max-xbound.min)/Double(screenWidth)
         var out:[(Double,Double)] = []
         for x:Double in (xbound.min).stride(to: xbound.max, by: resolution){
-            let replaced = input.stringByReplacingOccurrencesOfString("x", withString: "(0\(x))")
+            let replaced = input.stringByReplacingOccurrencesOfString("x", withString: "\(x)")
             print("replace \(replaced)")
             let y:Double = slover(replaced)
             print("Output \(y)")

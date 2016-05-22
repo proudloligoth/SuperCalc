@@ -615,9 +615,10 @@ class CalculatorViewController: UIViewController {
         numStack.removeAll()
         userInput.removeAll()
         opStack.removeAll()
-        var userInputtmp = Input
-
-        for charac in userInputtmp.characters{
+        currentInput = ""
+        print("input = \(Input)")
+        for charac in Input.characters{
+            print(charac)
             handleInputNonoti(String(charac))
         }
         
