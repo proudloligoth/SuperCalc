@@ -62,8 +62,8 @@ class CalculatorViewController: UIViewController {
             opStack.append(str)             // add operator to stack
             isNotinStack = false            // all inputs are in stack
             userInput += str                // update text
-            textlabel.text = userInput      // update label
-            txtInput = ["ip":userInput]
+//            textlabel.text = userInput      // update label
+            txtInput = ["key":userInput]
             NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
         } else if str == "sin(" || str == "cos(" || str == "tan(" || str == "ln(" || str == "log₁₀(" || str == "√(" {
             // must follow operator
@@ -73,7 +73,9 @@ class CalculatorViewController: UIViewController {
                 isNotinStack = false
                 parenCount += 1
                 userInput += str
-                textlabel.text = userInput
+//                textlabel.text = userInput
+                txtInput = ["key":userInput]
+                NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
             }
         } else if str == "e" {
             print("press e")
@@ -84,7 +86,9 @@ class CalculatorViewController: UIViewController {
                 numStack.append(M_E)
                 isNotinStack = false
                 userInput += str                // update text
-                textlabel.text = userInput      // update label
+//                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
             }
         } else if str == "π" {
             print("press pi")
@@ -95,17 +99,27 @@ class CalculatorViewController: UIViewController {
                 numStack.append(M_PI)
                 isNotinStack = false
                 userInput += str                // update text
-                textlabel.text = userInput      // update label
+//                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
             }
         } else if str == "x" {
+            currentInput = ""
+            isNotinStack = false
             isFunc = true
+            userInput += str                // update text
+            //                textlabel.text = userInput      // update label
+            txtInput = ["key":userInput]
+            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
         } else if str == "(" {
             if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" || currentInput == "" {
                 currentInput = str
                 opStack.append(str)
                 isNotinStack = false
                 userInput += str                // update text
-                textlabel.text = userInput      // update label
+//                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
                 parenCount += 1
             }
         } else if str == ")" {
@@ -118,7 +132,9 @@ class CalculatorViewController: UIViewController {
                 opStack.append(str)
                 isNotinStack = false
                 userInput += str                // update text
-                textlabel.text = userInput      // update label
+//                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
                 parenCount -= 1
             }
         } else {
@@ -133,7 +149,9 @@ class CalculatorViewController: UIViewController {
                 currentInput += str
                 isNotinStack = true
                 userInput += str                // update text
-                textlabel.text = userInput      // update label
+//                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
             }
 
         }
@@ -167,6 +185,10 @@ class CalculatorViewController: UIViewController {
                 ans = numStack[numRev] / ans
                 calNumStack.removeLast()
                 calOpStack.removeLast()
+            } else if calOpStack[opRev] == "^" {
+                ans = pow(numStack[numRev],ans)
+                calNumStack.removeLast()
+                calOpStack.removeLast()
             } else if calOpStack[opRev] == "sin(" {
                 ans = sin(ans)
                 calOpStack.removeLast()
@@ -175,6 +197,18 @@ class CalculatorViewController: UIViewController {
                 ans = cos(ans)
                 calOpStack.removeLast()
                 break
+            } else if calOpStack[0] == "tan(" {
+                ans = tan(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "ln(" {
+                ans = log(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "log₁₀(" {
+                ans = log10(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "√(" {
+                ans = Double(sqrtf(Float(ans)))
+                calOpStack.removeLast()
             } else if calOpStack[opRev] == "(" {
                 calOpStack.removeLast()
                 break
@@ -204,6 +238,9 @@ class CalculatorViewController: UIViewController {
                 ans = Double(sqrtf(Float(ans)))
                 calOpStack.removeLast()
             }
+        }
+        if !calOpStack.isEmpty && calOpStack[calOpStack.count-1] == "(" {
+            calOpStack.removeLast()
         }
         print("ans = \(ans)")
         return ans
@@ -237,10 +274,10 @@ class CalculatorViewController: UIViewController {
         var isRightPre = ""
         var isParen = ""
         var op = 0
-        var num = 0
+        var num = 1
         
         while num < numStack.count || op < opStack.count {
-            print("num loop : \(num) -> \(opStack[op])")
+            print("\n num loop : \(num) -> \(opStack[op]) from \(numStack)")
             if opStack[op] == "+" {
                 if isRightPre != "2Left" && isRightPre != "" {
                     ans = doCalc()
@@ -251,8 +288,8 @@ class CalculatorViewController: UIViewController {
                         calNumStack.append(abs(ans))
                         calOpStack.append("-")
                     }
-                    isRightPre = "2Left"
                 }
+                isRightPre = "2Left"
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "-" {
@@ -265,18 +302,35 @@ class CalculatorViewController: UIViewController {
                         calNumStack.append(abs(ans))
                         calOpStack.append("-")
                     }
-                    isRightPre = "2Left"
                 }
+                isRightPre = "2Left"
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "×" {
-//                if isRightPre != "3Left" && isRightPre != ""{
-//                    ans = doCalc()
-//                }
+                if isRightPre == "4Right" {
+                    ans = doCalc()
+                    if ans >= 0 {
+                        calNumStack.append(ans)
+                    } else {
+                        calNumStack.append(0)
+                        calNumStack.append(abs(ans))
+                        calOpStack.append("-")
+                    }
+                }
                 isRightPre = "3Left"
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "÷" {
+                if isRightPre == "4Right" {
+                    ans = doCalc()
+                    if ans >= 0 {
+                        calNumStack.append(ans)
+                    } else {
+                        calNumStack.append(0)
+                        calNumStack.append(abs(ans))
+                        calOpStack.append("-")
+                    }
+                }
                 isRightPre = "3Left"
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
@@ -287,7 +341,6 @@ class CalculatorViewController: UIViewController {
             } else if opStack[op] == "(" {
                 isParen = "open"
                 calOpStack.append(opStack[op])
-//                calNumStack.append(numStack[num])
                 num -= 1
             } else if opStack[op] == "sin(" {
                 isParen = "open"
@@ -323,6 +376,8 @@ class CalculatorViewController: UIViewController {
                     calNumStack.append(abs(ans))
                     calOpStack.append("-")
                 }
+                isParen = "close"
+                num -= 1
 //                }
             } else {
                 print("no operation \(opStack[op])")
@@ -352,12 +407,20 @@ class CalculatorViewController: UIViewController {
                     ans = ans * calNumStack[num]
                 } else if calOpStack[op] == "÷" {
                     ans = Double(ans) / calNumStack[num]
+                } else if calOpStack[op] == "^" {
+                    ans = pow(Double(ans),calNumStack[num])
                 } else if calOpStack[op] == "sin(" {
                     ans = sin(ans)
                 } else if calOpStack[op] == "cos(" {
                     ans = cos(ans)
                 } else if calOpStack[op] == "tan(" {
                     ans = tan(ans)
+                } else if calOpStack[op] == "ln(" {
+                    ans = log(ans)
+                } else if calOpStack[op] == "log₁₀(" {
+                    ans = log10(ans)
+                } else if calOpStack[op] == "√(" {
+                    ans = sqrt(ans)
                 } else {
                     print("no operation \(calOpStack[op])")
                 }
@@ -372,9 +435,9 @@ class CalculatorViewController: UIViewController {
         // display output
         let iAcc = Int(ans)
         if ans - Double(iAcc) == 0 {
-//            resultlabel.text = String(iAcc)
+            textlabel.text = String(iAcc)
         } else {
-//            resultlabel.text = "\(ans)"
+            textlabel.text = "\(ans)"
         }
     }
 
@@ -385,11 +448,14 @@ class CalculatorViewController: UIViewController {
         for i in 0..<parenCount {
             userInput += ")"
             opStack.append(")")
-            textlabel.text = userInput
+//            textlabel.text = userInput
+            txtInput = ["key":userInput]
+            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
         }
         if isFunc {
             // change to graph page
-            xEquation = ["eq":userInput]
+            print("show graph")
+            xEquation = ["key":userInput]
             NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: xEquation as [NSObject : AnyObject])
         } else {
             if isNotinStack {
@@ -401,7 +467,9 @@ class CalculatorViewController: UIViewController {
                 userInput = String(userInput.characters.dropLast())
                 currentInput = "="
                 opStack.removeLast()
-                textlabel.text = userInput
+//                textlabel.text = userInput
+                txtInput = ["key":userInput]
+                NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
             }
             
             print("ans of \(userInput)")
@@ -504,11 +572,16 @@ class CalculatorViewController: UIViewController {
     @IBAction func btn_del(sender: AnyObject) {
         userInput = ""
         currentInput = ""
+        isNeg = false
+        isFunc = false
+        isNotinStack = false
         numStack.removeAll()
         opStack.removeAll()
         calNumStack.removeAll()
         calOpStack.removeAll()
         textlabel.text = nil
+        txtInput = ["key":userInput]
+        NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
 //        resultlabel.text = nil
 //        print("reset ans \(resultlabel.text)")
     }
