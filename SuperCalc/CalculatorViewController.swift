@@ -452,6 +452,8 @@ class CalculatorViewController: UIViewController {
             txtInput = ["key":userInput]
             NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
         }
+        parenCount = 0
+        
         if isFunc {
             // change to graph page
             print("show graph")
@@ -463,7 +465,7 @@ class CalculatorViewController: UIViewController {
                 currentInput = "="
                 isNotinStack = false
             }
-            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")"{
+            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")" && !opStack.isEmpty{
                 userInput = String(userInput.characters.dropLast())
                 currentInput = "="
                 opStack.removeLast()
@@ -572,6 +574,7 @@ class CalculatorViewController: UIViewController {
     @IBAction func btn_del(sender: AnyObject) {
         userInput = ""
         currentInput = ""
+        parenCount = 0
         isNeg = false
         isFunc = false
         isNotinStack = false
