@@ -174,7 +174,7 @@ class GraphViewController: CalculatorViewController {
         let resolution :Double = abs(xbound.max-xbound.min)/Double(screenWidth)
         var out:[(Double,Double)] = []
         for x:Double in (xbound.min).stride(to: xbound.max, by: resolution){
-            let replaced = input.stringByReplacingOccurrencesOfString("x", withString: "\(x)")
+            let replaced = input.stringByReplacingOccurrencesOfString("x", withString: "(0\(x))")
             print("replace \(replaced)")
             let y:Double = slover(replaced)
             print("Output \(y)")
