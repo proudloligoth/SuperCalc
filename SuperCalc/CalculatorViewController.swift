@@ -52,7 +52,9 @@ class CalculatorViewController: UIViewController {
                 opStack.removeLast()
             } else if userInput == "" {
                 isNeg = true
-            }  else if Double(currentInput) != nil {
+            } else if str == "-" && currentInput == "(" {
+                numStack.append(0)
+            } else if Double(currentInput) != nil {
                 // add number
                 numStack.append(Double(currentInput)!)
             } else {
