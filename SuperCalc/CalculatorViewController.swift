@@ -42,7 +42,7 @@ class CalculatorViewController: UIViewController {
     
     func handleInput(str: String) {
         print("new input \(userInput)")
-        let dictionary = ["key":userInput]
+        let dictionary = ["key":str]
         NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: dictionary)
         if str == "+" || str == "-" || str == "×" || str == "÷" || str == "^" {
             // change operator

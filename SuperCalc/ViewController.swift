@@ -16,10 +16,6 @@ class ViewController: UIViewController{
     
     internal var toPass:String!
     
-    func writeValueBack(value: String) {
-        // Or any other function you need to transport data
-        textcal.text = value
-    }
     
     
     override func viewDidLoad() {
@@ -40,14 +36,14 @@ class ViewController: UIViewController{
 //        textcal.layer.shadowOffset = CGSize(width: 0.0, height: 10.0)
 //        textcal.layer.shadowRadius = 5
         // Do any additional setup after loading the view.
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector:"myMethod:", name: "passDataInView", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,selector:"myMethod:", name: "passDataInView", object: nil)
     }
     func myMethod(notification: NSNotification){
         
         
         let x = notification.userInfo!
-        print(x["key"])
+        print("data are sent from \(x["key"]!)")
+        textcal.text = x["key"] as! String
         
     }
     
