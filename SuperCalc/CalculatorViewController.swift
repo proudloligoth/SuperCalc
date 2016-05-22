@@ -28,7 +28,8 @@ class CalculatorViewController: UIViewController {
     
     var calNumStack: [Double] = []
     var calOpStack: [String] = []
-
+    var xEquation = [:]
+    var txtInput = [:]
     
     // Looks for a single character in a string.
     func hasIndex(stringToSearch str: String, characterToFind chr: Character) -> Bool {
@@ -42,8 +43,6 @@ class CalculatorViewController: UIViewController {
     
     func handleInput(str: String) {
         print("new input \(userInput)")
-        let dictionary = ["key":str]
-        NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: dictionary)
         if str == "+" || str == "-" || str == "×" || str == "÷" || str == "^" {
             // change operator
             if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" {
@@ -64,6 +63,8 @@ class CalculatorViewController: UIViewController {
             isNotinStack = false            // all inputs are in stack
             userInput += str                // update text
             textlabel.text = userInput      // update label
+            txtInput = ["ip":userInput]
+            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
         } else if str == "sin(" || str == "cos(" || str == "tan(" || str == "ln(" || str == "log₁₀(" || str == "√(" {
             // must follow operator
             if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" || currentInput == "" {
@@ -380,19 +381,21 @@ class CalculatorViewController: UIViewController {
     
     func doEquals() {
         print(userInput)
+        print("parenCount : \(parenCount)")
+        for i in 0..<parenCount {
+            userInput += ")"
+            opStack.append(")")
+            textlabel.text = userInput
+        }
         if isFunc {
             // change to graph page
+            xEquation = ["eq":userInput]
+            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: xEquation as [NSObject : AnyObject])
         } else {
             if isNotinStack {
                 numStack.append(Double(currentInput)!)
                 currentInput = "="
                 isNotinStack = false
-            }
-            print("parenCount : \(parenCount)")
-            for i in 0..<parenCount {
-                userInput += ")"
-                opStack.append(")")
-                textlabel.text = userInput
             }
             while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")"{
                 userInput = String(userInput.characters.dropLast())
