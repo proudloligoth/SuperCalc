@@ -160,7 +160,11 @@ class GraphViewController: UIViewController {
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
         let textcalheight = boundsetting.frame.size.height
         
-        let chartFrame = CGRectMake(-7, textcalheight+statusBarHeight-7, self.view.frame.size.width, (self.view.frame.size.height - textcalheight - statusBarHeight+14))
+        var chartFrame = CGRectMake(-7, textcalheight+statusBarHeight-7, self.view.frame.size.width, (self.view.frame.size.height - textcalheight - statusBarHeight+14))
+        
+        if((self.view.frame.size.height < self.view.frame.size.width)&&(!Env.iPad)){
+            chartFrame = CGRectMake(-7, statusBarHeight-7, self.view.frame.size.width, (self.view.frame.size.height  - statusBarHeight+14))
+        }
         
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: ExamplesDefaults.chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
         let (xAxis, yAxis, innerFrame) = (coordsSpace.xAxis, coordsSpace.yAxis, coordsSpace.chartInnerFrame)

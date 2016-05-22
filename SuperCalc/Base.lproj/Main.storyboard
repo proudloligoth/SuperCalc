@@ -567,26 +567,23 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="768" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="center" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YJe-SZ-jjP">
-                                                        <rect key="frame" x="315" y="0.0" width="139" height="30"/>
+                                                        <rect key="frame" x="313" y="0.0" width="143" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G63-KE-gjy">
-                                                                <rect key="frame" x="0.0" y="2" width="12" height="26"/>
+                                                                <rect key="frame" x="0.0" y="2" width="16" height="26"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="12" id="N4e-Vt-qG4"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.1101273109" green="0.6884037502" blue="0.91439376829999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" From " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVo-ED-QS8">
-                                                                <rect key="frame" x="12" y="5" width="49" height="21"/>
+                                                                <rect key="frame" x="16" y="5" width="49" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeP-1c-pDa">
-                                                                <rect key="frame" x="61" y="0.0" width="25" height="30"/>
+                                                                <rect key="frame" x="65" y="0.0" width="25" height="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -595,13 +592,13 @@
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" To " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-uM-Skh">
-                                                                <rect key="frame" x="86" y="5" width="28" height="20"/>
+                                                                <rect key="frame" x="90" y="5" width="28" height="20"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-P6-Ugs">
-                                                                <rect key="frame" x="114" y="0.0" width="25" height="30"/>
+                                                                <rect key="frame" x="118" y="0.0" width="25" height="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -641,7 +638,6 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="YJe-SZ-jjP" firstAttribute="top" secondItem="h4J-e0-sOd" secondAttribute="top" id="L6k-hp-LHU"/>
-                                                    <constraint firstAttribute="width" constant="48" id="P9j-jh-J23"/>
                                                     <constraint firstAttribute="bottom" secondItem="YJe-SZ-jjP" secondAttribute="bottom" id="RAW-6D-ZdQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="YJe-SZ-jjP" secondAttribute="trailing" id="gg5-kN-HYl"/>
                                                     <constraint firstItem="YJe-SZ-jjP" firstAttribute="top" secondItem="h4J-e0-sOd" secondAttribute="top" id="jkD-WX-vK0"/>
@@ -651,7 +647,6 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="P9j-jh-J23"/>
                                                         <exclude reference="L6k-hp-LHU"/>
                                                         <exclude reference="gg5-kN-HYl"/>
                                                         <exclude reference="oiv-Yy-fgp"/>
@@ -660,7 +655,6 @@
                                                 </variation>
                                                 <variation key="heightClass=compact">
                                                     <mask key="constraints">
-                                                        <include reference="P9j-jh-J23"/>
                                                         <include reference="L6k-hp-LHU"/>
                                                         <include reference="gg5-kN-HYl"/>
                                                         <include reference="oiv-Yy-fgp"/>
@@ -714,8 +708,7 @@
                                                                         <exclude reference="phh-cG-7p2"/>
                                                                     </mask>
                                                                 </variation>
-                                                                <variation key="heightClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="0.0" y="118" width="50" height="30"/>
+                                                                <variation key="heightClass=compact">
                                                                     <mask key="constraints">
                                                                         <include reference="phh-cG-7p2"/>
                                                                     </mask>
@@ -741,7 +734,8 @@
                                                                 <exclude reference="ZNC-XO-UH9"/>
                                                             </mask>
                                                         </variation>
-                                                        <variation key="heightClass=compact" axis="vertical" distribution="equalSpacing">
+                                                        <variation key="heightClass=compact" axis="vertical" distribution="equalSpacing" misplaced="YES">
+                                                            <rect key="frame" x="-1" y="0.0" width="49" height="332"/>
                                                             <mask key="constraints">
                                                                 <include reference="P3c-mZ-kkN"/>
                                                                 <include reference="aFS-vj-VCZ"/>
@@ -798,6 +792,9 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="-31" y="0.0" width="111" height="333"/>
+                                                        </variation>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -810,13 +807,22 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="h4J-e0-sOd" firstAttribute="top" secondItem="SMM-d0-G0L" secondAttribute="top" id="Fcf-rx-e4e"/>
-                                            <constraint firstItem="YSi-dr-ISU" firstAttribute="top" secondItem="MRB-LV-UdK" secondAttribute="bottom" id="JpB-Zw-YnB"/>
                                             <constraint firstItem="YSi-dr-ISU" firstAttribute="leading" secondItem="SMM-d0-G0L" secondAttribute="leading" id="MnO-vx-M6Q"/>
                                             <constraint firstItem="h4J-e0-sOd" firstAttribute="leading" secondItem="SMM-d0-G0L" secondAttribute="leading" id="NjU-B3-1PM"/>
                                             <constraint firstAttribute="trailing" secondItem="YSi-dr-ISU" secondAttribute="trailing" id="Utn-rI-hnL"/>
+                                            <constraint firstAttribute="width" constant="1" id="mMM-LM-LDW"/>
                                             <constraint firstAttribute="bottom" secondItem="YSi-dr-ISU" secondAttribute="bottom" id="p6k-Je-RLT"/>
                                         </constraints>
-                                        <variation key="heightClass=compact" axis="vertical"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="mMM-LM-LDW"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact" axis="vertical">
+                                            <mask key="constraints">
+                                                <include reference="mMM-LM-LDW"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-OS-Vr5" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="96" width="768" height="908"/>

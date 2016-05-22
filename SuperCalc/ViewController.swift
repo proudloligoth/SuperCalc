@@ -57,14 +57,14 @@ class ViewController: UIViewController{
         }
     }
     
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation){
-        
-        // Reload Data here
-        removePageSwitch()
-        loadPageSwitch()
-        self.view.setNeedsDisplay()
-        
-    }
+//    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation){
+//        
+//        // Reload Data here
+//        removePageSwitch()
+//        loadPageSwitch()
+//        self.view.setNeedsDisplay()
+//        
+//    }
     
     private func loadPageSwitch(){
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height - 5
