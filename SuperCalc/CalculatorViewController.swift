@@ -30,6 +30,7 @@ class CalculatorViewController: UIViewController {
     var calOpStack: [String] = []
     var xEquation = [:]
     var txtInput = [:]
+    var numInput = [:]
     
     // Looks for a single character in a string.
     func hasIndex(stringToSearch str: String, characterToFind chr: Character) -> Bool {
@@ -459,6 +460,8 @@ class CalculatorViewController: UIViewController {
             print("show graph")
             xEquation = ["key":userInput]
             NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: xEquation as [NSObject : AnyObject])
+            numInput = ["key":numStack]
+            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: numInput as [NSObject : AnyObject])
         } else {
             if isNotinStack {
                 numStack.append(Double(currentInput)!)
