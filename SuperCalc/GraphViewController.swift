@@ -29,7 +29,9 @@ class GraphViewController: CalculatorViewController {
     
     @IBAction func xDataEdited(sender: AnyObject) {
         if let data = xData.text where !xData.text!.isEmpty {
+            let replaced = input.stringByReplacingOccurrencesOfString("x", withString: "(0\(data))")
             
+            yData.text = String(slover(replaced))
         }
     }
     @IBAction func xMinEdited(sender: AnyObject) {
