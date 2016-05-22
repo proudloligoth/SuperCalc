@@ -38,12 +38,13 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
         NSNotificationCenter.defaultCenter().addObserver(self,selector:"myMethod:", name: "passDataInView", object: nil)
     }
+    
     func myMethod(notification: NSNotification){
         
-        
         let x = notification.userInfo!
-        print("data are sent from \(x["key"]!)")
+        print("data are sent from view \(x["key"]!)")
         textcal.text = x["key"] as! String
+//        NSNotificationCenter.defaultCenter().postNotificationName("passDataToGraph", object: nil, userInfo: x as [NSObject : AnyObject])
         
     }
     

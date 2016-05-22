@@ -160,6 +160,126 @@ class CalculatorViewController: UIViewController {
         }
     }
     
+    func handleInputNonoti(str: String) {
+        print("new input \(userInput)")
+        if str == "+" || str == "-" || str == "×" || str == "÷" || str == "^" {
+            // change operator
+            if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" {
+                // clear last operation
+                userInput = String(userInput.characters.dropLast())
+                opStack.removeLast()
+            } else if userInput == "" {
+                isNeg = true
+            } else if str == "-" && currentInput == "(" {
+                numStack.append(0)
+            } else if Double(currentInput) != nil {
+                // add number
+                numStack.append(Double(currentInput)!)
+            } else {
+                print("unexpected case")
+            }
+            lastOp = str                    // latest operator
+            currentInput = str              // current = operator
+            opStack.append(str)             // add operator to stack
+            isNotinStack = false            // all inputs are in stack
+            userInput += str                // update text
+            //            textlabel.text = userInput      // update label
+            txtInput = ["key":userInput]
+            //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+        } else if str == "sin(" || str == "cos(" || str == "tan(" || str == "ln(" || str == "log₁₀(" || str == "√(" {
+            // must follow operator
+            if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" || currentInput == "" {
+                currentInput = str
+                opStack.append(str)
+                isNotinStack = false
+                parenCount += 1
+                userInput += str
+                //                textlabel.text = userInput
+                txtInput = ["key":userInput]
+                //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+            }
+        } else if str == "e" {
+            print("press e")
+            // can follow any, but number
+            if Double(currentInput) == nil {
+                currentInput = ""       // e value
+                //                numStack.append(2.71828)
+                numStack.append(M_E)
+                isNotinStack = false
+                userInput += str                // update text
+                //                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+            }
+        } else if str == "π" {
+            print("press pi")
+            // can follow any, but number
+            if Double(currentInput) == nil {
+                currentInput = ""       // pi value
+                //                numStack.append(3.14159)
+                numStack.append(M_PI)
+                isNotinStack = false
+                userInput += str                // update text
+                //                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+            }
+        } else if str == "x" {
+            currentInput = ""
+            isNotinStack = false
+            isFunc = true
+            userInput += str                // update text
+            //                textlabel.text = userInput      // update label
+            txtInput = ["key":userInput]
+            //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+        } else if str == "(" {
+            if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" || currentInput == "" {
+                currentInput = str
+                opStack.append(str)
+                isNotinStack = false
+                userInput += str                // update text
+                //                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+                parenCount += 1
+            }
+        } else if str == ")" {
+            print(currentInput)
+            if parenCount > 0 {
+                if Double(currentInput) != nil {
+                    numStack.append(Double(currentInput)!)
+                }
+                currentInput = str
+                opStack.append(str)
+                isNotinStack = false
+                userInput += str                // update text
+                //                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+                parenCount -= 1
+            }
+        } else {
+            // case number
+            // follow operator, reset
+            if Double(currentInput) == nil && currentInput != ")" {
+                currentInput = ""
+            }
+            if currentInput == ")" {
+                // do nothing
+            } else {
+                currentInput += str
+                isNotinStack = true
+                userInput += str                // update text
+                //                textlabel.text = userInput      // update label
+                txtInput = ["key":userInput]
+                //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: txtInput as [NSObject : AnyObject])
+            }
+            
+        }
+    }
+    
+    
+    
     func doCalc() -> Double {
         print("\n do calc")
         print(calNumStack)
@@ -249,7 +369,7 @@ class CalculatorViewController: UIViewController {
         return ans
     }
     
-    func displayAnswer() {
+    func displayAnswer() -> Double {
         print(userInput)
         print(numStack)
         print(opStack)
@@ -437,17 +557,21 @@ class CalculatorViewController: UIViewController {
         
         // display output
         let iAcc = Int(ans)
+        if((textlabel != nil)){
         if ans - Double(iAcc) == 0 {
             textlabel.text = String(iAcc)
         } else {
             textlabel.text = "\(ans)"
         }
+        }
+        return ans
     }
 
     
     func doEquals() {
         print(userInput)
-        print("parenCount : \(parenCount)")
+        print(numStack)
+        print("\n no function calc \nparenCount : \(parenCount)")
         for i in 0..<parenCount {
             userInput += ")"
             opStack.append(")")
@@ -461,9 +585,9 @@ class CalculatorViewController: UIViewController {
             // change to graph page
             print("show graph")
             xEquation = ["key":userInput]
-            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: xEquation as [NSObject : AnyObject])
+            NSNotificationCenter.defaultCenter().postNotificationName("passDataToGraph", object: nil, userInfo: xEquation as [NSObject : AnyObject])
             numInput = ["key":numStack]
-            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: numInput as [NSObject : AnyObject])
+            //NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: numInput as [NSObject : AnyObject])
         } else {
             if isNotinStack {
                 numStack.append(Double(currentInput)!)
@@ -487,7 +611,61 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-//    func InToPost(infixString: String){
+    public func slover(Input:String) -> Double {
+        numStack.removeAll()
+        userInput.removeAll()
+        opStack.removeAll()
+        var userInputtmp = Input
+
+        for charac in userInputtmp.characters{
+            handleInputNonoti(String(charac))
+        }
+        
+        print("input = \(userInput)")
+        print("\nplot graph \nparenCount : \(parenCount)")
+        for i in 0..<parenCount {
+            userInput += ")"
+            opStack.append(")")
+            //            textlabel.text = userInput
+            txtInput = ["key":userInput]
+        }
+        parenCount = 0
+        
+//        if isFunc {
+//            // change to graph page
+//            print("show graph")
+//            xEquation = ["key":userInput]
+//            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: xEquation as [NSObject : AnyObject])
+//            numInput = ["key":numStack]
+//            NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: numInput as [NSObject : AnyObject])
+//        } else {
+            if isNotinStack {
+                numStack.append(Double(currentInput)!)
+                currentInput = "="
+                isNotinStack = false
+            }
+            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")" && !opStack.isEmpty{
+                userInput = String(userInput.characters.dropLast())
+                currentInput = "="
+                opStack.removeLast()
+                //                textlabel.text = userInput
+                txtInput = ["key":userInput]
+            }
+            
+            print("ans of \(userInput)")
+            if userInput == "" {
+                return 0
+            }
+            var ans = displayAnswer()
+            print("answer = \(ans)")
+        
+            return ans
+//        }
+//        return 0
+    }
+    
+    
+    //    func InToPost(infixString: String){
 //        
 //        // infixString += " "
 //        for c in infixString.characters{

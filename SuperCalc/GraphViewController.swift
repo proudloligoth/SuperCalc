@@ -9,18 +9,26 @@
 import UIKit
 import SwiftCharts
 
-class GraphViewController: UIViewController {
+class GraphViewController: CalculatorViewController {
 
     @IBOutlet weak var xMin: UITextField!
     @IBOutlet weak var xMax: UITextField!
     @IBOutlet weak var yMin: UITextField!
     @IBOutlet weak var yMax: UITextField!
     
+    @IBOutlet weak var xData: UITextField!
+    @IBOutlet weak var yData: UILabel!
+    
     @IBOutlet weak var boundsetting: UIStackView!
     private var chart: Chart? // arc
     private var xbound:(min:Double,max:Double) = (-5,5)
     private var ybound:(min:Double,max:Double) = (-5,5)
     
+    @IBAction func xDataEdited(sender: AnyObject) {
+        if let data = xData.text where !xData.text!.isEmpty {
+            
+        }
+    }
     @IBAction func xMinEdited(sender: AnyObject) {
         if let Min = xMin.text where !xMin.text!.isEmpty {
             if let Max = xMax.text where !xMax.text!.isEmpty{
@@ -120,7 +128,13 @@ class GraphViewController: UIViewController {
         xMax.textColor = UIColor.blueColor()
         yMin.textColor = UIColor.blueColor()
         yMax.textColor = UIColor.blueColor()
+        NSNotificationCenter.defaultCenter().addObserver(self,selector:"myMethod:", name: "passDataToGraph", object: nil)
         
+    }
+    
+    func myMethod(notification: NSNotification){
+        let x = notification.userInfo!
+        convertString(x["key"] as! String)
         
     }
     
@@ -142,6 +156,29 @@ class GraphViewController: UIViewController {
         return out
     }
     
+    private func convertString(input:String){
+        if ((input.rangeOfString("x")) != nil) {
+            
+            generateXY(self.xbound,ybound:self.ybound, input: input)
+        }
+    }
+    
+    private func generateXY(xbound:(min:Double,max:Double),ybound:(min:Double,max:Double),input:String)->[(Double,Double)]{
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        let resolution :Double = abs(xbound.max-xbound.min)/Double(screenWidth)
+        var out:[(Double,Double)] = []
+        for x:Double in (xbound.min).stride(to: xbound.max, by: resolution){
+            let replaced = input.stringByReplacingOccurrencesOfString("x", withString: "(0\(x))")
+            print("replace \(replaced)")
+            let y:Double = slover(replaced)
+            print("Output \(y)")
+            out.append((x,y))
+        }
+        return out
+    }
+   
     
     private func drawgraph(xAxisnum: (Double,Double),yAxisnum: (Double,Double),chartPointsData: [(Double,Double)]){
         
