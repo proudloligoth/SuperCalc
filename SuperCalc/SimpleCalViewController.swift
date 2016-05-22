@@ -90,30 +90,28 @@ class SimpleCalViewController: UIViewController {
         
         var op = 0
         var ans = calNumStack[calNumStack.count-1]
-        for num in 2..<calNumStack.count {
+        calNumStack.removeLast()
+        for num in 0..<calNumStack.count {
             let opRev = calOpStack.count - 1
-            let numRev = calNumStack.count - 2
+            let numRev = calNumStack.count - 1
             print("op = \(calOpStack[opRev]), \(opRev), \(numRev)")
+            print(calNumStack)
             if calOpStack[opRev] == "+" {
                 ans = numStack[numRev] + ans
                 calNumStack.removeLast()
                 calOpStack.removeLast()
-                calNumStack.append(ans)
             } else if calOpStack[opRev] == "-" {
                 ans = numStack[numRev] - ans
                 calNumStack.removeLast()
                 calOpStack.removeLast()
-                calNumStack.append(ans)
             } else if calOpStack[opRev] == "×" {
                 ans = numStack[numRev] * ans
                 calNumStack.removeLast()
                 calOpStack.removeLast()
-                calNumStack.append(ans)
             } else if calOpStack[opRev] == "÷" {
                 ans = numStack[numRev] / ans
                 calNumStack.removeLast()
                 calOpStack.removeLast()
-                calNumStack.append(ans)
             } else {
                 print("no operation \(opStack[opRev])")
             }
@@ -149,7 +147,6 @@ class SimpleCalViewController: UIViewController {
             if opStack[op] == "+" {
                 if isRightPre {
                     ans = doCalc()
-                    calNumStack.removeLast()
                     if ans >= 0 {
                         calNumStack.append(ans)
                     } else {
@@ -164,7 +161,6 @@ class SimpleCalViewController: UIViewController {
             } else if opStack[op] == "-" {
                 if isRightPre {
                     ans = doCalc()
-                    calNumStack.removeLast()
                     if ans >= 0 {
                         calNumStack.append(ans)
                     } else {
@@ -189,26 +185,31 @@ class SimpleCalViewController: UIViewController {
             }
             op += 1
         }
-
-        print("\n do normal calc")
+        
         print(calNumStack)
         print(calOpStack)
-        op = 0
-        ans = calNumStack[0]
-        for num in 1..<calNumStack.count {
-            if calOpStack[op] == "+" {
-                ans = ans + calNumStack[num]
-            } else if calOpStack[op] == "-" {
-                ans = ans - calNumStack[num]
-            } else if calOpStack[op] == "×" {
-                ans = ans * calNumStack[num]
-            } else if calOpStack[op] == "÷" {
-                ans = Double(ans) / calNumStack[num]
-            } else {
-                print("no operation \(calOpStack[op])")
+        if isRightPre {
+            ans = doCalc()
+            calNumStack.append(ans)
+        } else {
+            print("\n do normal calc")
+            op = 0
+            ans = calNumStack[0]
+            for num in 1..<calNumStack.count {
+                if calOpStack[op] == "+" {
+                    ans = ans + calNumStack[num]
+                } else if calOpStack[op] == "-" {
+                    ans = ans - calNumStack[num]
+                } else if calOpStack[op] == "×" {
+                    ans = ans * calNumStack[num]
+                } else if calOpStack[op] == "÷" {
+                    ans = Double(ans) / calNumStack[num]
+                } else {
+                    print("no operation \(calOpStack[op])")
+                }
+                op += 1
+                print("ans = \(ans)")
             }
-            op += 1
-            print("ans = \(ans)")
         }
         
         calNumStack.removeAll()

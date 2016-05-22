@@ -52,9 +52,11 @@ class CalculatorViewController: UIViewController {
                 opStack.removeLast()
             } else if userInput == "" {
                 isNeg = true
-            } else {
+            }  else if Double(currentInput) != nil {
                 // add number
                 numStack.append(Double(currentInput)!)
+            } else {
+                print("unexpected case")
             }
             lastOp = str                    // latest operator
             currentInput = str              // current = operator
@@ -73,18 +75,24 @@ class CalculatorViewController: UIViewController {
                 textlabel.text = userInput
             }
         } else if str == "e" {
+            print("press e")
             // can follow any, but number
-            if Double(currentInput) != nil {
-                currentInput += "2.71828"       // e value
-                isNotinStack = true
+            if Double(currentInput) == nil {
+                currentInput = ""       // e value
+//                numStack.append(2.71828)
+                numStack.append(M_E)
+                isNotinStack = false
                 userInput += str                // update text
                 textlabel.text = userInput      // update label
             }
         } else if str == "π" {
+            print("press pi")
             // can follow any, but number
-            if Double(currentInput) != nil {
-                currentInput += "3.14159"       // pi value
-                isNotinStack = true
+            if Double(currentInput) == nil {
+                currentInput = ""       // pi value
+//                numStack.append(3.14159)
+                numStack.append(M_PI)
+                isNotinStack = false
                 userInput += str                // update text
                 textlabel.text = userInput      // update label
             }
@@ -100,13 +108,17 @@ class CalculatorViewController: UIViewController {
                 parenCount += 1
             }
         } else if str == ")" {
+            print(currentInput)
             if parenCount > 0 {
+                if Double(currentInput) != nil {
+                    numStack.append(Double(currentInput)!)
+                }
                 currentInput = str
                 opStack.append(str)
                 isNotinStack = false
                 userInput += str                // update text
                 textlabel.text = userInput      // update label
-                parenCount += 1
+                parenCount -= 1
             }
         } else {
             // case number
@@ -127,16 +139,90 @@ class CalculatorViewController: UIViewController {
     }
     
     func doCalc() -> Double {
-        // all processes
-        return 0
+        print("\n do calc")
+        print(calNumStack)
+        print(calOpStack)
+        
+        var op = 0
+        var ans = calNumStack[calNumStack.count-1]
+        calNumStack.removeLast()
+        for num in 0..<calNumStack.count {
+            let opRev = calOpStack.count - 1
+            let numRev = calNumStack.count - 1
+            print("op = \(calOpStack[opRev]), \(opRev), \(numRev)")
+            if calOpStack[opRev] == "+" {
+                ans = numStack[numRev] + ans
+                calNumStack.removeLast()
+                calOpStack.removeLast()
+            } else if calOpStack[opRev] == "-" {
+                ans = numStack[numRev] - ans
+                calNumStack.removeLast()
+                calOpStack.removeLast()
+            } else if calOpStack[opRev] == "×" {
+                ans = numStack[numRev] * ans
+                calNumStack.removeLast()
+                calOpStack.removeLast()
+            } else if calOpStack[opRev] == "÷" {
+                ans = numStack[numRev] / ans
+                calNumStack.removeLast()
+                calOpStack.removeLast()
+            } else if calOpStack[opRev] == "sin(" {
+                ans = sin(ans)
+                calOpStack.removeLast()
+                break
+            } else if calOpStack[opRev] == "cos(" {
+                ans = cos(ans)
+                calOpStack.removeLast()
+                break
+            } else if calOpStack[opRev] == "(" {
+                calOpStack.removeLast()
+                break
+            } else {
+                print("no operation \(opStack[opRev])")
+            }
+            op += 1
+            print("ans = \(ans)")
+        }
+        if calOpStack.count == 1 {
+            if calOpStack[0] == "sin(" {
+                ans = sin(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "cos(" {
+                ans = cos(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "tan(" {
+                ans = tan(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "ln(" {
+                ans = log(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "log₁₀(" {
+                ans = log10(ans)
+                calOpStack.removeLast()
+            } else if calOpStack[0] == "√(" {
+                ans = Double(sqrtf(Float(ans)))
+                calOpStack.removeLast()
+            }
+        }
+        print("ans = \(ans)")
+        return ans
     }
     
     func displayAnswer() {
         print(userInput)
         print(numStack)
         print(opStack)
-        if(numStack.count <= opStack.count) {
-            let diff = opStack.count - numStack.count
+        var opStackNoParen = opStack.filter{$0 != "("}
+        opStackNoParen = opStackNoParen.filter{$0 != "sin("}
+        opStackNoParen = opStackNoParen.filter{$0 != "cos("}
+        opStackNoParen = opStackNoParen.filter{$0 != "tan("}
+        opStackNoParen = opStackNoParen.filter{$0 != "ln("}
+        opStackNoParen = opStackNoParen.filter{$0 != "log₁₀(" }
+        opStackNoParen = opStackNoParen.filter{$0 != "√("}
+        opStackNoParen = opStackNoParen.filter{$0 != ")"}
+        print(opStackNoParen)
+        if(numStack.count <= opStackNoParen.count) {
+            let diff = opStackNoParen.count - numStack.count
             // put 0 at first until n nidex, n = diff(opStack,numStack)
             for i in 0...diff {
                 numStack.insert(Double(0), atIndex: i)
@@ -147,16 +233,16 @@ class CalculatorViewController: UIViewController {
         // do calculate
         var ans = 0.0
         calNumStack.append(numStack[0])
-        var isRightPre = false
+        var isRightPre = ""
+        var isParen = ""
         var op = 0
-    
-        for num in 1..<numStack.count {
+        var num = 0
+        
+        while num < numStack.count || op < opStack.count {
             print("num loop : \(num) -> \(opStack[op])")
             if opStack[op] == "+" {
-                if isRightPre {
+                if isRightPre != "2Left" && isRightPre != "" {
                     ans = doCalc()
-                    calNumStack.removeAll()
-                    calOpStack.removeAll()
                     if ans >= 0 {
                         calNumStack.append(ans)
                     } else {
@@ -164,15 +250,13 @@ class CalculatorViewController: UIViewController {
                         calNumStack.append(abs(ans))
                         calOpStack.append("-")
                     }
-                    isRightPre = false
+                    isRightPre = "2Left"
                 }
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "-" {
-                if isRightPre {
+                if isRightPre != "2Left" && isRightPre != "" {
                     ans = doCalc()
-                    calNumStack.removeAll()
-                    calOpStack.removeAll()
                     if ans >= 0 {
                         calNumStack.append(ans)
                     } else {
@@ -180,57 +264,82 @@ class CalculatorViewController: UIViewController {
                         calNumStack.append(abs(ans))
                         calOpStack.append("-")
                     }
-                    isRightPre = false
+                    isRightPre = "2Left"
                 }
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "×" {
-                isRightPre = true
+//                if isRightPre != "3Left" && isRightPre != ""{
+//                    ans = doCalc()
+//                }
+                isRightPre = "3Left"
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "÷" {
-                isRightPre = true
+                isRightPre = "3Left"
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "^" {
-                isRightPre = true
+                isRightPre = "4Right"
                 calOpStack.append(opStack[op])
                 calNumStack.append(numStack[num])
             } else if opStack[op] == "(" {
+                isParen = "open"
                 calOpStack.append(opStack[op])
-                calNumStack.append(numStack[num])
+//                calNumStack.append(numStack[num])
+                num -= 1
             } else if opStack[op] == "sin(" {
+                isParen = "open"
                 calOpStack.append(opStack[op])
-                calNumStack.append(numStack[num])
+                num -= 1
             } else if opStack[op] == "cos(" {
+                isParen = "open"
                 calOpStack.append(opStack[op])
-                calNumStack.append(numStack[num])
+                num -= 1
             } else if opStack[op] == "tan(" {
+                isParen = "open"
                 calOpStack.append(opStack[op])
-                calNumStack.append(numStack[num])
+                num -= 1
             } else if opStack[op] == "ln(" {
+                isParen = "open"
                 calOpStack.append(opStack[op])
-                calNumStack.append(numStack[num])
+                num -= 1
             } else if opStack[op] == "log₁₀(" {
+                isParen = "open"
                 calOpStack.append(opStack[op])
-                calNumStack.append(numStack[num])
+                num -= 1
             } else if opStack[op] == "√(" {
+                isParen = "open"
                 calOpStack.append(opStack[op])
-                calNumStack.append(numStack[num])
+                num -= 1
             } else if opStack[op] == ")" {
-                doCalc()
+//                if isParen == "open" {
+                ans = doCalc()
+                if ans >= 0 {
+                    calNumStack.append(ans)
+                } else {
+                    calNumStack.append(0)
+                    calNumStack.append(abs(ans))
+                    calOpStack.append("-")
+                }
+//                }
             } else {
                 print("no operation \(opStack[op])")
             }
             op += 1
+            num += 1
         }
         
-        if isRightPre {
+        
+        print("\n do normal calc")
+        print(calNumStack)
+        print(calOpStack)
+        if calNumStack.isEmpty {
+            // do nothing
+        } else if isRightPre == "3Right" {
             ans = doCalc()
+            calNumStack.append(ans)
         } else {
-            print("\n do normal calc")
-            print(calNumStack)
-            print(calOpStack)
             op = 0
             ans = calNumStack[0]
             for num in 1..<calNumStack.count {
@@ -238,6 +347,16 @@ class CalculatorViewController: UIViewController {
                     ans = ans + calNumStack[num]
                 } else if calOpStack[op] == "-" {
                     ans = ans - calNumStack[num]
+                } else if calOpStack[op] == "×" {
+                    ans = ans * calNumStack[num]
+                } else if calOpStack[op] == "÷" {
+                    ans = Double(ans) / calNumStack[num]
+                } else if calOpStack[op] == "sin(" {
+                    ans = sin(ans)
+                } else if calOpStack[op] == "cos(" {
+                    ans = cos(ans)
+                } else if calOpStack[op] == "tan(" {
+                    ans = tan(ans)
                 } else {
                     print("no operation \(calOpStack[op])")
                 }
@@ -266,19 +385,22 @@ class CalculatorViewController: UIViewController {
         } else {
             if isNotinStack {
                 numStack.append(Double(currentInput)!)
+                currentInput = "="
                 isNotinStack = false
             }
-            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")"{
-                userInput = String(userInput.characters.dropLast())
-                currentInput = ""
-                opStack.removeLast()
-                textlabel.text = userInput
-            }
+            print("parenCount : \(parenCount)")
             for i in 0..<parenCount {
                 userInput += ")"
                 opStack.append(")")
                 textlabel.text = userInput
             }
+            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")"{
+                userInput = String(userInput.characters.dropLast())
+                currentInput = "="
+                opStack.removeLast()
+                textlabel.text = userInput
+            }
+            
             print("ans of \(userInput)")
             if userInput == "" {
                 return
