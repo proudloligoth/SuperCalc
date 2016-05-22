@@ -203,6 +203,7 @@ class CalculatorViewController: UIViewController {
                 calOpStack.removeLast()
             }
         }
+        print("ans = \(ans)")
         return ans
     }
     
@@ -234,7 +235,7 @@ class CalculatorViewController: UIViewController {
         var isRightPre = ""
         var isParen = ""
         var op = 0
-        var num = 1
+        var num = 0
         
         while num < numStack.count || op < opStack.count {
             print("num loop : \(num) -> \(opStack[op])")
@@ -386,18 +387,19 @@ class CalculatorViewController: UIViewController {
                 currentInput = "="
                 isNotinStack = false
             }
-            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")"{
-                userInput = String(userInput.characters.dropLast())
-                currentInput = "="
-                opStack.removeLast()
-                textlabel.text = userInput
-            }
             print("parenCount : \(parenCount)")
             for i in 0..<parenCount {
                 userInput += ")"
                 opStack.append(")")
                 textlabel.text = userInput
             }
+            while Double(String(userInput[userInput.endIndex.predecessor()])) == nil && userInput[userInput.endIndex.predecessor()] != ")"{
+                userInput = String(userInput.characters.dropLast())
+                currentInput = "="
+                opStack.removeLast()
+                textlabel.text = userInput
+            }
+            
             print("ans of \(userInput)")
             if userInput == "" {
                 return
