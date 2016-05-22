@@ -9,8 +9,7 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-    
-    
+        
     var accumulator: Double = 0.0 // Store the calculated value here
     var userInput = "" // User-entered digits
     var currentInput = ""
@@ -43,6 +42,8 @@ class CalculatorViewController: UIViewController {
     
     func handleInput(str: String) {
         print("new input \(userInput)")
+        let dictionary = ["key":userInput]
+        NSNotificationCenter.defaultCenter().postNotificationName("passDataInView", object: nil, userInfo: dictionary)
         if str == "+" || str == "-" || str == "×" || str == "÷" || str == "^" {
             // change operator
             if currentInput == "+" || currentInput == "-" || currentInput == "×" || currentInput == "÷" || currentInput == "^" {
@@ -414,13 +415,8 @@ class CalculatorViewController: UIViewController {
     }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        var destination: ViewController = segue.destinationViewController as ViewController
+//        var destination: ViewController = segue.destinationViewController as! ViewController{
 //       
-//        if let vc = destination as? ViewController {
-//            destination?.labelcal = textlabel.text
-//        }
-//        let DestViewController : ViewController = segue.destinationViewController as! ViewController
-//        DestViewController.labelcal = textlabel.text!
 //        
 //        
 //    }

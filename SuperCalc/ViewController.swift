@@ -6,7 +6,7 @@
 //  Copyright © 2559 Natnicha Thonket. All rights reserved.
 //
 import UIKit
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     var pageViewController: UIPageViewController!
         
@@ -14,8 +14,13 @@ class ViewController: UIViewController {
     
     var labelcal = String()
     
-    
     internal var toPass:String!
+    
+    func writeValueBack(value: String) {
+        // Or any other function you need to transport data
+        textcal.text = value
+    }
+    
     
     override func viewDidLoad() {
         
@@ -35,6 +40,15 @@ class ViewController: UIViewController {
 //        textcal.layer.shadowOffset = CGSize(width: 0.0, height: 10.0)
 //        textcal.layer.shadowRadius = 5
         // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector:"myMethod:", name: "passDataInView", object: nil)
+    }
+    func myMethod(notification: NSNotification){
+        
+        
+        let x = notification.userInfo!
+        print(x["key"])
+        
     }
     
     private func removePageSwitch(){
